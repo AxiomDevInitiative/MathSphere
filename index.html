@@ -1120,44 +1120,137 @@ function routeFromTopic(raw){
  if(/[0-9]/.test(q))return {view:'calculator',label:'Hitung angka'};
  return {view:null,label:'Aku belum yakin menu mana yang paling cocok. Coba pilih salah satu dari enam kartu di atas.'};
 }
-// In-app Back navigation (browser history + Android WebView friendly).
+// MathSphere Back Guard 4.0
+// Goal: Back in a module -> Home; Back on Home -> remain in this document.
+// Use History API when available; fall back to a hash sentinel for restrictive HTML viewers.
 let mathSphereBackReady=false;
 let mathSphereCurrentView='home';
-function showView(name, options={}){
- if(!document.getElementById('view-'+name))return;
- const previous=mathSphereCurrentView;
+let mathSphereBackMode='none';
+let mathSphereBaseHash='';
+const mathSphereGuardHash='#mathsphere-back-guard';
+function mathSphereIsEditing(){
+ const el=document.activeElement;
+ return !!(el&&( /INPUT|TEXTAREA|SELECT/.test(el.tagName)||el.isContentEditable));
+}
+function mathSpherePreventBack(event){
+ if(event){
+  if(typeof event.preventDefault==='function')event.preventDefault();
+  if(typeof event.stopImmediatePropagation==='function')event.stopImmediatePropagation();
+  else if(typeof event.stopPropagation==='function')event.stopPropagation();
+  event.returnValue=false;
+ }
+}
+function mathSphereShowOnly(name){
+ if(!document.getElementById('view-'+name))name='home';
  $$('.view').forEach(v=>v.classList.toggle('active',v.id==='view-'+name));
  $$('.nav').forEach(n=>n.classList.toggle('active',n.dataset.view===name));
  mathSphereCurrentView=name;
  if(name==='home'&&$('#homeTopic'))$('#homeSuggestion').textContent='';
- try{window.scrollTo(0,0)}catch(e){}
- if(mathSphereBackReady && !options.fromPop && previous!==name){
-  try{history.pushState({mathSphere:true,view:name},'',location.href)}catch(e){}
- }
+ try{window.scrollTo(0,0)}catch(_){}
 }
 function mathSphereBack(){
- if(mathSphereCurrentView!=='home'){showView('home');return true}
- return false;
-}
-function mathSphereHandlePop(){
+ if(!mathSphereBackReady)return true;
  if(mathSphereCurrentView!=='home'){
-  const target=(history.state&&history.state.mathSphere&&history.state.view)||'home';
-  showView(target,{fromPop:true});
-  // Maintain a state entry so another Back is handled by the app at its root.
-  try{history.pushState({mathSphere:true,view:mathSphereCurrentView},'',location.href)}catch(e){}
+  mathSphereShowOnly('home');
+  try{history.back()}catch(_){}
+ }
+ // Always consume Back. Home is the root screen and never leaves the document.
+ return true;
+}
+function showView(name, options={}){
+ if(!document.getElementById('view-'+name)||name===mathSphereCurrentView)return;
+ const previous=mathSphereCurrentView;
+ mathSphereShowOnly(name);
+ if(!mathSphereBackReady||options.fromPop)return;
+ if(mathSphereBackMode==='history'){
+  if(name==='home'&&previous!=='home'){
+   // Pop the single active-module entry back to the Home guard.
+   try{history.back()}catch(_){}
+  }else if(name!=='home'&&previous==='home'){
+   try{history.pushState({mathSphere:true,kind:'view',view:name},'',location.href)}catch(_){mathSphereBackMode='hash';mathSphereSetHashView(name,true)}
+  }else if(name!=='home'){
+   try{history.replaceState({mathSphere:true,kind:'view',view:name},'',location.href)}catch(_){mathSphereBackMode='hash';mathSphereSetHashView(name,false)}
+  }
+ }else if(mathSphereBackMode==='hash'){
+  if(name==='home'&&previous!=='home'){
+   try{history.back()}catch(_){}
+  }else if(name!=='home'){
+   mathSphereSetHashView(name,previous==='home');
+  }
+ }
+}
+function mathSphereSetHashView(name,push){
+ const hash='#mathsphere-view-'+encodeURIComponent(name);
+ try{
+  if(push)location.hash=hash.slice(1);
+  else location.replace(hash);
+ }catch(_){}
+}
+function mathSphereHandlePop(event){
+ const state=event&&event.state;
+ if(state&&state.mathSphere&&state.kind==='view'&&state.view&&document.getElementById('view-'+state.view)){
+  mathSphereShowOnly(state.view);
   return;
  }
- // At the home screen, ask before leaving. A declined exit restores the guard.
- const leave=confirm('Keluar dari MathSphere?');
- if(!leave){try{history.pushState({mathSphere:true,view:'home'},'',location.href)}catch(e){}}
+ if(state&&state.mathSphere&&state.kind==='guard'){
+  mathSphereShowOnly('home');
+  return;
+ }
+ // The user pressed Back at the app root. Move forward to the guard entry
+ // rather than adding endless new entries or leaving this HTML document.
+ mathSphereShowOnly('home');
+ try{history.forward()}catch(_){}
+}
+function mathSphereHandleHash(){
+ if(mathSphereBackMode!=='hash')return;
+ const hash=location.hash||'';
+ if(hash.startsWith('#mathsphere-view-')){
+  const view=decodeURIComponent(hash.slice('#mathsphere-view-'.length));
+  if(document.getElementById('view-'+view))mathSphereShowOnly(view);
+  else mathSphereShowOnly('home');
+  return;
+ }
+ if(hash===mathSphereGuardHash){
+  mathSphereShowOnly('home');
+  return;
+ }
+ // Back from Home reached the original URL. Return to the sentinel entry.
+ mathSphereShowOnly('home');
+ try{history.forward()}catch(_){}
+}
+function mathSphereHandleNativeBack(event){
+ mathSpherePreventBack(event);
+ mathSphereBack();
 }
 window.addEventListener('popstate',mathSphereHandlePop);
+window.addEventListener('hashchange',mathSphereHandleHash);
+window.addEventListener('backbutton',mathSphereHandleNativeBack);
+document.addEventListener('backbutton',mathSphereHandleNativeBack);
 document.addEventListener('keydown',e=>{
- if(e.key==='Escape'||e.key==='Backspace'&&!(document.activeElement&&/INPUT|TEXTAREA/.test(document.activeElement.tagName))){
-  if(mathSphereBack()){e.preventDefault();e.stopPropagation()}
+ const isBackKey=['Escape','BrowserBack','GoBack'].includes(e.key)||e.keyCode===4||
+  (e.key==='Backspace'&&!mathSphereIsEditing());
+ if(isBackKey){
+  mathSpherePreventBack(e);
+  mathSphereBack();
  }
 });
-try{history.replaceState({mathSphere:true,view:'home'},'',location.href);history.pushState({mathSphere:true,view:'home'},'',location.href);mathSphereBackReady=true}catch(e){mathSphereBackReady=true}
+try{
+ mathSphereBaseHash=location.hash||'';
+ history.replaceState({mathSphere:true,kind:'root',view:'home'},'',location.href);
+ history.pushState({mathSphere:true,kind:'guard',view:'home'},'',location.href);
+ mathSphereBackMode='history';
+ mathSphereBackReady=true;
+}catch(_){
+ // Some embedded viewers restrict History API; a same-document hash entry is the fallback.
+ mathSphereBackMode='hash';
+ try{
+  if(location.hash!==mathSphereGuardHash)location.hash=mathSphereGuardHash.slice(1);
+  mathSphereBackReady=true;
+ }catch(__){
+  mathSphereBackMode='none';
+  mathSphereBackReady=true;
+ }
+}
 $$('[data-home-view]').forEach(b=>b.addEventListener('click',()=>showView(b.dataset.homeView)));
 $('#homeShortcut').addEventListener('click',()=>showView('home'));
 $('#homeFindTool').addEventListener('click',()=>{
@@ -2050,4 +2143,4 @@ document.addEventListener('click',e=>{
 
 </script>
 </body>
-</html>
+ </html>
