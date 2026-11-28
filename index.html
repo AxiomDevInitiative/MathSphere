@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#f5f8ff">
-<title>MathSphere — Friendly Assistant 3.0 | Goal-first UI</title>
+<title>MathSphere — Friendly Assistant 5.2 | Fraction Engine 2.0</title>
 <style>
 :root{--bg:#f4f7fc;--panel:#fff;--ink:#17243b;--muted:#71809a;--line:#e5ebf4;--blue:#3478f6;--blue2:#eaf1ff;--cyan:#13b8c8;--green:#159b70;--red:#d84b5b;--shadow:0 12px 34px rgba(35,66,112,.08)}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0} .app{max-width:1240px;margin:auto;padding:16px}
@@ -372,6 +372,117 @@ input::placeholder,textarea::placeholder{color:var(--field-placeholder);opacity:
 }
 @media(prefers-reduced-motion:reduce){.home-card:hover{transform:none}}
 
+
+.curriculum-launch{border-style:dashed}.curriculum-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.curriculum-links a{display:block;padding:10px 11px;border:1px solid var(--line);border-radius:11px;background:var(--panel-2);color:var(--ink);font-weight:750;font-size:12px;text-decoration:none}
+.curriculum-links a:focus,.curriculum-links a:hover{border-color:var(--blue);background:var(--blue2)}
+.curriculum-tool{scroll-margin-top:16px}.curriculum-tool .three-col{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.curriculum-tool .field{min-width:0}.curriculum-tool .math-input{width:100%}.curriculum-tool .output-area:empty{display:none}.curriculum-tool .result-box{line-height:1.65}
+.result-actions{display:flex;justify-content:flex-end;margin-top:8px}.angle-result-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:10px 0}.angle-result-grid>div{display:flex;justify-content:space-between;gap:8px;padding:9px 10px;border-radius:10px;background:var(--panel-2);border:1px solid var(--line)}.angle-result-grid span{font-size:12px;color:var(--muted)}.angle-result-grid b{white-space:nowrap;color:var(--blue)}
+@media(max-width:650px){.curriculum-links{grid-template-columns:repeat(2,minmax(0,1fr))}.curriculum-tool .three-col{grid-template-columns:1fr}.angle-result-grid{grid-template-columns:1fr}}
+
+
+.curriculum-more{margin:10px 0 16px;border:1px solid var(--line);border-radius:16px;background:var(--panel);overflow:hidden}
+.curriculum-more>summary{padding:14px 16px;cursor:pointer;color:var(--ink);font-size:14px;font-weight:850;list-style:none}
+.curriculum-more>summary::-webkit-details-marker{display:none}
+.curriculum-more[open]>summary{border-bottom:1px solid var(--line);background:var(--panel-2)}
+.curriculum-more>.curriculum-tool{margin:12px}
+
+
+#view-powers .power-intro-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:12px 0}
+#view-powers .power-intro-card{padding:13px;border:1px solid var(--line);border-radius:14px;background:var(--panel);display:flex;flex-direction:column;gap:3px;min-width:0}
+#view-powers .power-intro-card b{font-size:12px;color:var(--ink)}
+#view-powers .power-intro-card span{font-size:10px;color:var(--muted);line-height:1.4}
+#view-powers .power-intro-card strong{font-size:23px;color:var(--blue);margin-top:2px}
+#view-powers .power-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:12px}
+#view-powers .power-form .field{min-width:0}
+#view-powers .power-form .math-input{width:100%;min-width:0}
+#view-powers .power-examples{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin-top:13px}
+#view-powers .power-examples .btn{font-size:11px;padding:8px 10px}
+#view-powers .power-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+#view-powers .power-output:empty{display:none}
+#view-powers .power-output{margin-top:16px}
+#view-powers .power-steps{display:grid;gap:9px;margin:12px 0}
+#view-powers .power-step{padding:12px;border:1px solid var(--line);border-radius:13px;background:var(--panel-2)}
+#view-powers .power-step .kicker{font-size:9px;font-weight:900;letter-spacing:1px;color:var(--blue);margin-bottom:4px}
+#view-powers .power-step p{margin:4px 0 0;color:var(--muted);font-size:12px;line-height:1.55;overflow-wrap:anywhere}
+#view-powers .power-step .formula{font-size:15px;font-weight:800;color:var(--ink);overflow-wrap:anywhere}
+#view-powers .power-final{padding:15px;border-radius:15px;border:1px solid color-mix(in srgb,var(--green) 35%,var(--line));background:color-mix(in srgb,var(--green) 9%,var(--panel))}
+#view-powers .power-final .answer{font-size:clamp(20px,4vw,28px);font-weight:900;color:var(--green);overflow-wrap:anywhere}
+#view-powers .power-law-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+#view-powers .power-law-list>div{padding:11px;border:1px solid var(--line);border-radius:12px;background:var(--panel-2);min-width:0}
+#view-powers .power-law-list b,#view-powers .power-law-list span,#view-powers .power-law-list small{display:block}
+#view-powers .power-law-list b{font-size:12px;color:var(--ink)}
+#view-powers .power-law-list span{font-size:15px;font-weight:800;color:var(--blue);margin:5px 0;overflow-wrap:anywhere}
+#view-powers .power-law-list small{font-size:10px;line-height:1.4;color:var(--muted)}
+#view-powers .power-edge-list{padding-left:19px;color:var(--muted);font-size:12px;line-height:1.7}
+#view-powers .power-edge-list li{margin:5px 0}
+#view-powers .power-note{font-size:11px;line-height:1.5;color:var(--muted);margin-top:7px}
+@media(max-width:620px){
+ #view-powers .power-intro-grid{gap:6px}
+ #view-powers .power-intro-card{padding:10px}
+ #view-powers .power-intro-card span{font-size:9px}
+ #view-powers .power-form{grid-template-columns:1fr}
+ #view-powers .power-law-list{grid-template-columns:1fr}
+ #view-powers .power-actions .btn{flex:1}
+}
+
+
+/* Fraction Engine 2.0 */
+#view-fractions .fraction-engine-panel{padding:clamp(12px,2.2vw,22px)}
+#view-fractions .fraction-mode-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+#view-fractions .fraction-input-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0}
+#view-fractions .fraction-input-card{min-width:0;padding:14px;border:1px solid var(--line);border-radius:15px;background:var(--panel-2)}
+#view-fractions .fraction-input-card h4{margin:0 0 12px;color:var(--ink);font-size:14px}
+#view-fractions .frac-entry-row{display:flex;align-items:center;gap:10px;min-width:0}
+#view-fractions .fraction-sign-control{display:grid;gap:5px;min-width:0;flex:1}
+#view-fractions .fraction-sign-control span{font-size:10px;color:var(--muted);font-weight:800}
+#view-fractions .fraction-sign-control select{width:100%;min-width:0;padding:9px 7px;border:1px solid var(--line);border-radius:9px;background:var(--panel);color:var(--ink);font-size:11px}
+#view-fractions .frac-stack-input{display:grid;grid-template-rows:auto 2px auto;gap:4px;flex:0 0 94px;min-width:0;align-items:center}
+#view-fractions .frac-stack-input input{width:100%;min-width:0;text-align:center;padding:8px 3px;font-size:16px;font-weight:750}
+#view-fractions .frac-input-line{height:2px;width:100%;border-radius:4px;background:var(--ink);opacity:.75}
+#view-fractions .fraction-input-card small{display:block;margin-top:9px;font-size:10px;line-height:1.4}
+#view-fractions .fraction-examples{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin-top:12px}
+#view-fractions .fraction-examples .btn{font-size:11px;padding:8px 10px}
+#view-fractions .fraction-action-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+#view-fractions .fraction-action-row .btn:first-child{flex:1}
+#view-fractions .fraction-result:empty{display:none}
+#view-fractions .fraction-result{margin-top:16px}
+#view-fractions .fraction-output-card{padding:16px;border-radius:16px;border:1px solid color-mix(in srgb,var(--green) 32%,var(--line));background:color-mix(in srgb,var(--green) 8%,var(--panel))}
+#view-fractions .fraction-output-label{font-size:10px;font-weight:900;letter-spacing:.8px;color:var(--muted)}
+#view-fractions .fraction-large{display:flex;align-items:center;gap:7px;justify-content:center;margin:15px auto 6px;min-height:70px;color:var(--ink)}
+#view-fractions .frac-display{display:inline-flex;align-items:center;justify-content:center;gap:5px;vertical-align:middle;white-space:nowrap}
+#view-fractions .frac-display-sign{font-size:1.2em;font-weight:850}
+#view-fractions .frac-display-stack{display:inline-grid;grid-template-rows:auto 2px auto;gap:3px;min-width:28px;text-align:center;vertical-align:middle}
+#view-fractions .frac-display-num,#view-fractions .frac-display-den{padding:0 5px;font-size:18px;line-height:1.25;font-weight:800;color:var(--ink)}
+#view-fractions .frac-display-bar{height:2px;background:var(--ink);border-radius:4px;min-width:100%}
+#view-fractions .fraction-exact-text{text-align:center;font-size:11px;color:var(--muted);overflow-wrap:anywhere}
+#view-fractions .fraction-mixed-line{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap;margin-top:10px;font-size:12px;color:var(--muted)}
+#view-fractions .frac-mixed{font-size:17px;font-weight:800;color:var(--ink)}
+#view-fractions .fraction-decimal{text-align:center;margin-top:8px;color:var(--muted);font-size:12px}
+#view-fractions .fraction-approx{font-size:27px;font-weight:900;color:var(--blue)}
+#view-fractions .fraction-expression{margin:12px 0;color:var(--muted);font-size:12px;overflow-wrap:anywhere}
+#view-fractions .fraction-steps{display:grid;gap:9px;margin:12px 0}
+#view-fractions .fraction-step{padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--panel-2);min-width:0}
+#view-fractions .fraction-step-note{background:color-mix(in srgb,var(--blue) 7%,var(--panel-2))}
+#view-fractions .fraction-step-kicker{font-size:9px;letter-spacing:.8px;font-weight:900;color:var(--blue);margin-bottom:6px}
+#view-fractions .fraction-step-body{font-size:13px;line-height:1.65;color:var(--ink);overflow-wrap:anywhere}
+#view-fractions .fraction-step p{margin:5px 0 0;color:var(--muted);font-size:11px;line-height:1.5}
+#view-fractions .fraction-copy-row{display:flex;align-items:center;justify-content:flex-end;gap:8px;margin-top:10px}
+#view-fractions .fraction-rules{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+#view-fractions .fraction-rules>div{padding:11px;border:1px solid var(--line);border-radius:12px;background:var(--panel-2)}
+#view-fractions .fraction-rules b,#view-fractions .fraction-rules span{display:block}
+#view-fractions .fraction-rules b{font-size:12px;color:var(--ink)}
+#view-fractions .fraction-rules span{font-size:11px;line-height:1.5;color:var(--muted);margin-top:5px}
+#view-fractions .power-fraction-exp{display:grid;grid-template-columns:1fr 22px 1fr;gap:8px;align-items:end;margin-top:10px}
+#view-fractions .fraction-exp-slash{text-align:center;padding-bottom:14px;color:var(--muted);font-size:20px}
+@media(max-width:650px){
+ #view-fractions .fraction-input-grid{grid-template-columns:1fr}
+ #view-fractions .frac-entry-row{gap:8px}
+ #view-fractions .frac-stack-input{flex-basis:104px}
+ #view-fractions .fraction-rules{grid-template-columns:1fr}
+ #view-fractions .fraction-action-row .btn{width:100%}
+}
+
 </style>
 </head>
 <body>
@@ -412,6 +523,7 @@ input::placeholder,textarea::placeholder{color:var(--field-placeholder);opacity:
  <button class="nav" data-view="units"><span class="ico">↔</span>Ubah ukuran</button>
  <details class="nav-more">
   <summary>Alat lainnya</summary>
+  <button class="nav" data-view="powers"><span class="ico">aⁿ</span>Operasi bilangan berpangkat</button>
   <button class="nav" data-view="algebra"><span class="ico">x²</span>Rapikan bentuk</button>
   <button class="nav" data-view="geometry"><span class="ico">△</span>Bangun & koordinat</button>
   <button class="nav" data-view="graph"><span class="ico">⌁</span>Lihat grafik</button>
@@ -498,6 +610,7 @@ input::placeholder,textarea::placeholder{color:var(--field-placeholder);opacity:
  <details class="home-more-tools">
   <summary>Perlu alat yang lebih lengkap? Lihat semua alat lainnya</summary>
   <div class="home-more-grid">
+   <button data-home-view="powers"><b>Operasi bilangan berpangkat</b><small>Aturan pangkat, pecahan, pangkat negatif dan nol</small></button>
    <button data-home-view="algebra"><b>Rapikan bentuk</b><small>Suku sejenis, perkalian bentuk, pangkat</small></button>
    <button data-home-view="geometry"><b>Bangun & koordinat</b><small>Sudut, sisi, lingkaran, garis, dan kesebangunan</small></button>
    <button data-home-view="graph"><b>Lihat grafik</b><small>Gambar fungsi pada bidang koordinat</small></button>
@@ -592,7 +705,7 @@ input::placeholder,textarea::placeholder{color:var(--field-placeholder);opacity:
  <div class="panel">
   <h3 class="panel-title">Bangun 3D — luas bagian luar & isi</h3>
   <p class="small muted">Pilih bentuk dan isi ukuran. Satuan panjang harus sama; luas menjadi satuan² dan volume satuan³.</p>
-  <div class="field"><label>Bangun ruang</label><select class="math-input" id="solidType"><option value="cube">Kubus</option><option value="cuboid">Balok</option><option value="prism">Prisma segitiga tegak (alas segitiga siku-siku)</option><option value="cylinder">Tabung</option><option value="cone">Kerucut</option><option value="sphere">Bola</option></select></div>
+  <div class="field"><label>Bangun ruang</label><select class="math-input" id="solidType"><option value="cube">Kubus</option><option value="cuboid">Balok</option><option value="prism">Prisma segitiga tegak (alas segitiga sembarang)</option><option value="squarePyramid">Limas alas persegi</option><option value="triPyramid">Limas alas segitiga sama sisi</option><option value="cylinder">Tabung</option><option value="cone">Kerucut</option><option value="sphere">Bola</option></select></div>
   <div class="two-col" id="solidFields"></div>
   <button class="btn" id="solidBtn">Hitung bangun ruang</button>
   <div id="solidOutput" class="output-area" aria-live="polite"></div>
@@ -608,6 +721,150 @@ input::placeholder,textarea::placeholder{color:var(--field-placeholder);opacity:
   <div class="two-col" id="transformExtra"><div class="field"><label>p (geser x)</label><input class="math-input" id="trP" type="number" step="any" value="2"></div><div class="field"><label>q (geser y)</label><input class="math-input" id="trQ" type="number" step="any" value="-1"></div></div>
   <button class="btn" id="transformBtn">Transformasikan titik</button>
   <div id="transformOutput" class="output-area" aria-live="polite"></div>
+ </div>
+
+ <div class="panel curriculum-launch">
+  <h3 class="panel-title">Materi lain yang bisa kamu pelajari</h3>
+  <p class="small muted">Pilih topik pelajaran sekolah. Setiap alat punya contoh dan penjelasan.</p>
+  <div class="curriculum-links">
+   <a href="#tool-quadratic">Persamaan kuadrat</a><a href="#tool-ratio">Perbandingan & skala</a>
+   <a href="#tool-social">Hitung uang & belanja</a><a href="#tool-angle">Sudut & garis</a>
+   <a href="#tool-sequence">Pola bilangan</a><a href="#tool-exponents">Pangkat, akar & bentuk baku</a>
+  </div>
+ </div>
+ <details class="curriculum-more" id="curriculumMore"><summary>Buka materi tambahan (6 topik)</summary>
+ <div class="panel curriculum-tool" id="tool-quadratic">
+  <h3 class="panel-title">Persamaan kuadrat — cari dua nilai x</h3>
+  <p class="small muted">Pakai saat soal memiliki x², misalnya x² − 5x + 6 = 0. Alat ini juga menunjukkan jenis akar dan titik puncak grafik.</p>
+  <div class="three-col">
+   <div class="field"><label>Angka di depan x² (a)</label><input class="math-input" id="quadA" type="number" step="any" value="1"></div>
+   <div class="field"><label>Angka di depan x (b)</label><input class="math-input" id="quadB" type="number" step="any" value="-5"></div>
+   <div class="field"><label>Angka tetap (c)</label><input class="math-input" id="quadC" type="number" step="any" value="6"></div>
+  </div>
+  <div class="task-examples"><button class="btn secondary" data-quad-example="two">Dua akar berbeda</button><button class="btn secondary" data-quad-example="double">Akar kembar</button><button class="btn secondary" data-quad-example="complex">Akar tidak real</button></div>
+  <div class="toolbar"><button class="btn" id="quadSolve">Cari akar & titik puncak</button><button class="btn secondary" data-reset-tool="quad">Ulangi contoh awal</button></div>
+  <div id="quadOutput" class="output-area" aria-live="polite"></div>
+ </div>
+ <div class="panel curriculum-tool" id="tool-ratio">
+  <h3 class="panel-title">Perbandingan & skala</h3>
+  <p class="small muted">Pilih perbandingan senilai, berbalik nilai, atau mencari skala peta. Pastikan ukuran memakai satuan yang sama.</p>
+  <div class="field"><label>Jenis soal</label><select class="math-input" id="ratioMode"><option value="direct">Senilai — makin banyak, hasil ikut bertambah</option><option value="inverse">Berbalik nilai — makin banyak, waktu bisa berkurang</option><option value="scale">Skala peta — jarak gambar dibanding jarak asli</option></select></div>
+  <div class="two-col" id="ratioFields"></div>
+  <div class="task-examples"><button class="btn secondary" data-ratio-example="direct">Contoh harga barang</button><button class="btn secondary" data-ratio-example="inverse">Contoh pekerja & waktu</button><button class="btn secondary" data-ratio-example="scale">Contoh skala peta</button></div>
+  <div class="toolbar"><button class="btn" id="ratioSolve">Hitung perbandingan</button><button class="btn secondary" data-reset-tool="ratio">Ulangi</button></div>
+  <div id="ratioOutput" class="output-area" aria-live="polite"></div>
+ </div>
+ <div class="panel curriculum-tool" id="tool-social">
+  <h3 class="panel-title">Hitung uang, belanja & keuntungan</h3>
+  <p class="small muted">Pilih kebutuhanmu. Masukkan jumlah uang tanpa simbol Rp.</p>
+  <div class="field"><label>Yang mau dihitung</label><select class="math-input" id="socialMode"><option value="profit">Untung atau rugi</option><option value="discount">Diskon belanja</option><option value="net">Berat bersih (bruto, neto, tara)</option><option value="interest">Bunga tunggal tabungan</option></select></div>
+  <div class="two-col" id="socialFields"></div>
+  <div class="task-examples"><button class="btn secondary" data-social-example="profit">Contoh untung</button><button class="btn secondary" data-social-example="discount">Contoh diskon</button><button class="btn secondary" data-social-example="net">Contoh berat barang</button><button class="btn secondary" data-social-example="interest">Contoh bunga</button></div>
+  <div class="toolbar"><button class="btn" id="socialSolve">Hitung</button><button class="btn secondary" data-reset-tool="social">Ulangi</button></div>
+  <div id="socialOutput" class="output-area" aria-live="polite"></div>
+ </div>
+ <div class="panel curriculum-tool" id="tool-angle">
+  <h3 class="panel-title">Sudut pada garis</h3>
+  <p class="small muted">Cari sudut yang berhadapan, bersebelahan, sehadap, atau berseberangan ketika dua garis dipotong garis lain.</p>
+  <div class="field"><label>Situasi soal</label><select class="math-input" id="angleMode"><option value="intersect">Dua garis berpotongan</option><option value="parallel">Dua garis sejajar dipotong garis lain</option></select></div>
+  <div class="field"><label>Sudut yang diketahui (derajat)</label><input class="math-input" id="angleKnown" type="number" min="0" max="180" step="any" value="65"></div>
+  <div class="task-examples"><button class="btn secondary" data-angle-example="65">Contoh 65°</button><button class="btn secondary" data-angle-example="120">Contoh 120°</button></div>
+  <div class="toolbar"><button class="btn" id="angleSolve">Cari sudut lainnya</button><button class="btn secondary" data-reset-tool="angle">Ulangi</button></div>
+  <div id="angleOutput" class="output-area" aria-live="polite"></div>
+ </div>
+ <div class="panel curriculum-tool" id="tool-sequence">
+  <h3 class="panel-title">Pola bilangan — angka berikutnya</h3>
+  <p class="small muted">Gunakan saat soal menanyakan pola angka, suku ke-n, atau jumlah beberapa suku pertama.</p>
+  <div class="field"><label>Jenis pola</label><select class="math-input" id="seqMode"><option value="arithmetic">Bertambah/berkurang dengan selisih tetap</option><option value="geometric">Dikali/dibagi dengan rasio tetap</option></select></div>
+  <div class="two-col"><div class="field"><label>Angka pertama</label><input class="math-input" id="seqFirst" type="number" step="any" value="3"></div><div class="field"><label>Selisih (atau pengali)</label><input class="math-input" id="seqStep" type="number" step="any" value="2"></div><div class="field"><label>Suku ke berapa?</label><input class="math-input" id="seqN" type="number" min="1" step="1" value="6"></div></div>
+  <div class="task-examples"><button class="btn secondary" data-seq-example="arithmetic">3, 5, 7, 9, …</button><button class="btn secondary" data-seq-example="geometric">2, 6, 18, 54, …</button></div>
+  <div class="toolbar"><button class="btn" id="seqSolve">Cari suku & jumlah</button><button class="btn secondary" data-reset-tool="sequence">Ulangi</button></div>
+  <div id="seqOutput" class="output-area" aria-live="polite"></div>
+ </div>
+ <div class="panel curriculum-tool" id="tool-exponents">
+  <h3 class="panel-title">Pangkat, akar & bentuk baku</h3>
+  <p class="small muted">Bantu hitung aturan pangkat, merasionalkan penyebut berbentuk akar, dan mengubah angka ke bentuk baku.</p>
+  <div class="field"><label>Yang mau dikerjakan</label><select class="math-input" id="expMode"><option value="laws">Perkalian/pembagian pangkat dengan basis sama</option><option value="rational">Hilangkan akar dari penyebut</option><option value="scientific">Ubah ke bentuk baku</option></select></div>
+  <div id="expExtraFields"></div>
+  <div class="task-examples"><button class="btn secondary" data-exp-example="laws">2³ × 2⁴</button><button class="btn secondary" data-exp-example="rational">3 / √5</button><button class="btn secondary" data-exp-example="scientific">4500000</button></div>
+  <div class="toolbar"><button class="btn" id="expToolSolve">Hitung</button><button class="btn secondary" data-reset-tool="exponents">Ulangi</button></div>
+  <div id="expToolOutput" class="output-area" aria-live="polite"></div>
+ </div>
+</details>
+
+</section>
+
+
+<section class="view" id="view-powers">
+ <div class="page-head">
+  <div><h2>Operasi bilangan berpangkat</h2><p>Hitung pangkat dengan langkah yang jelas, mulai dari aturan dasar sampai pecahan berpangkat.</p></div>
+  <span class="pill">POWER ENGINE 1.0</span>
+ </div>
+ <div class="task-guide">
+  <b>Dipakai kapan?</b>
+  <p>Gunakan saat soal berisi pangkat seperti 2³, 5⁷ ÷ 5³, (2/5)³, atau (2³/5³)². Pilih bentuk soalnya, lalu isi angka pada kotak yang muncul.</p>
+  <p class="small muted">Modul ini memakai basis bilangan bulat dan pangkat bilangan bulat. Untuk pangkat pecahan/akar, gunakan alat Bentuk Akar.</p>
+ </div>
+ <div class="power-intro-grid">
+  <div class="power-intro-card"><b>Basis</b><span>Angka yang dipangkatkan</span><strong>a</strong></div>
+  <div class="power-intro-card"><b>Pangkat</b><span>Berapa kali basis dikalikan</span><strong>m</strong></div>
+  <div class="power-intro-card"><b>Hasil</b><span>Bentuk eksak dan pendekatan</span><strong>aᵐ</strong></div>
+ </div>
+ <div class="panel">
+  <h3 class="panel-title">1. Pilih bentuk hitungan</h3>
+  <div class="field">
+   <label for="powerMode">Soalnya seperti apa?</label>
+   <select class="math-input" id="powerMode">
+    <option value="single">Satu bilangan berpangkat — aᵐ</option>
+    <option value="same-mul">Basis sama — aᵐ × aⁿ</option>
+    <option value="same-div">Basis sama — aᵐ ÷ aⁿ</option>
+    <option value="different-mul">Basis berbeda — aᵐ × bⁿ</option>
+    <option value="different-div">Basis berbeda — aᵐ ÷ bⁿ</option>
+    <option value="fraction-power">Pecahan berpangkat — (a/b)ⁿ</option>
+    <option value="fraction-quotient">Pangkat pembilang ÷ pangkat penyebut — aᵐ/bⁿ</option>
+    <option value="fraction-outer">Pangkat di luar kurung — (aᵐ/bⁿ)ᵏ</option>
+    <option value="power-power">Pangkat dari pangkat — (aᵐ)ⁿ</option>
+    <option value="product-power">Pangkat dari perkalian — (a × b)ⁿ</option>
+    <option value="mixed-fractions">Operasi dua pecahan berpangkat</option>
+   </select>
+  </div>
+  <div class="power-form" id="powerFields" aria-live="polite"></div>
+  <div class="power-examples">
+   <span class="small muted">Contoh siap pakai:</span>
+   <button class="btn secondary" type="button" data-power-example="same-div">5⁷ ÷ 5³</button>
+   <button class="btn secondary" type="button" data-power-example="negative">2⁻²</button>
+   <button class="btn secondary" type="button" data-power-example="zero">7⁰</button>
+   <button class="btn secondary" type="button" data-power-example="fraction"> (2/5)³ </button>
+   <button class="btn secondary" type="button" data-power-example="outer">(2³/5³)²</button>
+  </div>
+  <div class="power-actions">
+   <button class="btn" id="powerCalculate" type="button">Hitung langkah demi langkah</button>
+   <button class="btn secondary" id="powerReset" type="button">Ulangi</button>
+  </div>
+  <div id="powerError" class="wizard-error" role="alert" hidden></div>
+  <div id="powerOutput" class="power-output" aria-live="polite"></div>
+ </div>
+ <div class="panel">
+  <h3 class="panel-title">2. Aturan pangkat yang dipakai</h3>
+  <div class="power-law-list">
+   <div><b>Perkalian basis sama</b><span>aᵐ × aⁿ = aᵐ⁺ⁿ</span><small>Pangkatnya dijumlahkan.</small></div>
+   <div><b>Pembagian basis sama</b><span>aᵐ ÷ aⁿ = aᵐ⁻ⁿ</span><small>Pangkatnya dikurangkan, dengan a ≠ 0.</small></div>
+   <div><b>Pangkat dari pangkat</b><span>(aᵐ)ⁿ = aᵐⁿ</span><small>Pangkatnya dikalikan.</small></div>
+   <div><b>Pangkat pada perkalian</b><span>(ab)ⁿ = aⁿbⁿ</span><small>Pangkat berlaku untuk setiap faktor.</small></div>
+   <div><b>Pangkat pada pecahan</b><span>(a/b)ⁿ = aⁿ/bⁿ</span><small>Penyebut tidak boleh nol.</small></div>
+   <div><b>Pangkat nol</b><span>a⁰ = 1</span><small>Berlaku untuk a ≠ 0. Bentuk 0⁰ tidak didefinisikan.</small></div>
+   <div><b>Pangkat negatif</b><span>a⁻ⁿ = 1/aⁿ</span><small>Ubah menjadi kebalikan, dengan a ≠ 0.</small></div>
+  </div>
+ </div>
+ <div class="panel">
+  <h3 class="panel-title">3. Hal khusus yang dicek otomatis</h3>
+  <ul class="power-edge-list">
+   <li><b>Basis nol:</b> 0⁰ dan 0 berpangkat negatif ditolak, karena tidak terdefinisi.</li>
+   <li><b>Penyebut nol:</b> pembagian dengan nol diblokir sebelum perhitungan.</li>
+   <li><b>Basis negatif:</b> tanda hasil mengikuti ganjil atau genapnya pangkat.</li>
+   <li><b>Angka besar:</b> hasil disimpan sebagai bilangan bulat eksak, bukan hanya desimal biasa. Ada batas ukuran agar perangkat tidak macet.</li>
+   <li><b>Input kosong:</b> sistem menunjukkan bagian yang perlu dilengkapi.</li>
+  </ul>
  </div>
 </section>
 
@@ -668,11 +925,11 @@ input::placeholder,textarea::placeholder{color:var(--field-placeholder);opacity:
   <div class="notice">Batas saat ini: Algebra Lab berfokus pada polinomial satu variabel x dengan koefisien numerik, derajat maksimum 8. Faktorisasi otomatis mencari akar bulat sederhana, bukan semua kemungkinan faktor.</div>
  </div>
  <div class="panel">
-  <h3 class="panel-title">4. Fraction Lab — untuk operasi dua pecahan</h3>
-  <p>Gunakan menu ini jika soal meminta operasi pecahan. Masukkan pembilang dan penyebut masing-masing pecahan, lalu pilih operasi.</p>
-  <ul><li>Penyebut tidak boleh nol.</li><li>Bilangan dimasukkan sebagai bilangan bulat di kolom pembilang dan penyebut.</li><li>Hasil disederhanakan menggunakan FPB dan disajikan sebagai pecahan eksak.</li></ul>
+  <h3 class="panel-title">4. Fraction Engine — untuk hitungan pecahan</h3>
+  <p>Gunakan menu ini untuk tambah, kurang, kali, bagi, pecahan campuran, tanda minus, pecahan berpangkat, dan pangkat pecahan yang berhubungan dengan akar.</p>
+  <ul><li>Pembilang, penyebut, angka bulat campuran, dan pangkat diisi pada kotak angka terpisah.</li><li>Tanda minus bisa dipilih di depan pecahan, pembilang, atau penyebut.</li><li>Penyebut tidak boleh nol; hasil disederhanakan memakai FPB.</li><li>Hasil ditampilkan sebagai pecahan bertumpuk dengan garis mendatar, bentuk campuran bila sesuai, dan desimal pendekatan bila aman.</li><li>Pangkat pecahan menampilkan hasil eksak jika akar pembilang dan penyebut tepat; selain itu hasil diberi label pendekatan desimal.</li></ul>
   <div class="result-box"><b>Contoh:</b> 1/2 + 3/4 = <b>5/4</b> atau 1 1/4.</div>
-  <button class="btn secondary guide-go" data-goto="fractions">Buka Fraction Lab</button>
+  <button class="btn secondary guide-go" data-goto="fractions">Buka Hitung Pecahan</button>
  </div>
  <div class="panel">
   <h3 class="panel-title">5. Graphing — untuk melihat grafik fungsi</h3>
@@ -924,18 +1181,151 @@ input::placeholder,textarea::placeholder{color:var(--field-placeholder);opacity:
  <div class="notice">Algebra Lab fase ini memproses polinomial satu variabel x sampai derajat 8, dengan koefisien numerik dan operasi +, −, ×, ÷ konstanta, kurung, serta pangkat bulat. Ini belum mencakup seluruh manipulasi aljabar simbolik.</div>
 </section>
 
+
 <section class="view" id="view-fractions">
- <div class="page-head"><div><h2>Hitung pecahan</h2><p>Tambah, kurang, kali, dan bagi pecahan. Hasil disederhanakan otomatis.</p></div><span class="pill">Pecahan</span></div>
- <div class="task-guide"><b>Cocok untuk soal seperti apa?</b><p>Gunakan saat soal meminta menghitung pecahan. <b>Pembilang</b> adalah angka di atas garis pecahan, sedangkan <b>penyebut</b> adalah angka di bawahnya.</p><div class="task-examples"><button class="btn secondary fraction-example" data-a="1/2" data-b="3/4" data-op="add">Contoh ½ + ¾</button><button class="btn secondary fraction-example" data-a="5/6" data-b="1/3" data-op="sub">Contoh ⅚ − ⅓</button></div></div>
- <div class="panel">
-  <div class="two-col">
-   <div><h3 class="panel-title">Pecahan pertama</h3><div class="field"><label>PEMBILANG</label><input id="fracA_num" type="number" value="1"></div><div class="field"><label>PENYEBUT</label><input id="fracA_den" type="number" value="2"></div></div>
-   <div><h3 class="panel-title">Pecahan kedua</h3><div class="field"><label>PEMBILANG</label><input id="fracB_num" type="number" value="3"></div><div class="field"><label>PENYEBUT</label><input id="fracB_den" type="number" value="4"></div></div>
+ <div class="page-head">
+  <div><h2>Hitung pecahan</h2><p>Kerjakan pecahan biasa, campuran, pecahan negatif, dan pecahan berpangkat dengan langkah yang bisa diikuti.</p></div>
+  <span class="pill">FRACTION ENGINE 2.0</span>
+ </div>
+ <div class="task-guide">
+  <b>Dipakai kapan?</b>
+  <p>Pakai modul ini saat soal meminta menjumlahkan, mengurangkan, mengalikan, membagi, menyederhanakan, atau memberi pangkat pada pecahan.</p>
+  <p class="small muted">Pembilang = angka di atas garis. Penyebut = angka di bawah garis. Penyebut tidak boleh nol.</p>
+ </div>
+
+ <div class="panel fraction-engine-panel">
+  <div class="fraction-mode-head">
+   <div><h3 class="panel-title">1. Pilih jenis soal</h3><p class="small muted">Kolom angka akan menyesuaikan dengan pilihanmu.</p></div>
   </div>
-  <div class="field"><label>OPERASI</label><select id="fracOp"><option value="add">Penjumlahan (+)</option><option value="sub">Pengurangan (−)</option><option value="mul">Perkalian (×)</option><option value="div">Pembagian (÷)</option></select></div>
-  <button class="btn" id="fractionCalculate">Hitung pecahan</button><div id="fractionOutput" class="result-box">1/2 + 3/4 = 5/4 = 1 1/4</div>
+  <div class="field">
+   <label for="fracMode">Jenis perhitungan</label>
+   <select id="fracMode" class="math-input">
+    <option value="basic">Operasi pecahan biasa / campuran</option>
+    <option value="power">Pecahan berpangkat — (a/b)ⁿ</option>
+    <option value="rational-power">Pangkat pecahan — (a/b)ᵐ⁄ⁿ</option>
+   </select>
+  </div>
+
+  <div id="fracBasicFields">
+   <div class="field">
+    <label for="fracInputType">Bentuk pecahan yang dimasukkan</label>
+    <select id="fracInputType" class="math-input">
+     <option value="ordinary">Pecahan biasa</option>
+     <option value="mixed">Pecahan campuran (ada angka bulat di depan)</option>
+    </select>
+   </div>
+   <div class="fraction-input-grid">
+    <div class="fraction-input-card">
+     <h4>Pecahan pertama</h4>
+     <div class="field frac-whole-field" hidden><label for="fracA_whole">Angka bulat depan (opsional)</label><input id="fracA_whole" class="math-input" type="text" inputmode="numeric" autocomplete="off" placeholder="Contoh: 1"></div>
+     <div class="frac-entry-row">
+      <label class="fraction-sign-control"><span>Tanda</span><select id="fracA_sign" aria-label="Posisi tanda pecahan pertama"><option value="plus">+ positif</option><option value="outside">− di depan</option><option value="numerator">− di pembilang</option><option value="denominator">− di penyebut</option></select></label>
+      <div class="frac-stack-input">
+       <input id="fracA_num" class="math-input" type="text" inputmode="numeric" autocomplete="off" value="1" aria-label="Pembilang pecahan pertama">
+       <span class="frac-input-line"></span>
+       <input id="fracA_den" class="math-input" type="text" inputmode="numeric" autocomplete="off" value="2" aria-label="Penyebut pecahan pertama">
+      </div>
+     </div>
+     <small class="muted">Isi pembilang dan penyebut dengan bilangan bulat.</small>
+    </div>
+    <div class="fraction-input-card">
+     <h4>Pecahan kedua</h4>
+     <div class="field frac-whole-field" hidden><label for="fracB_whole">Angka bulat depan (opsional)</label><input id="fracB_whole" class="math-input" type="text" inputmode="numeric" autocomplete="off" placeholder="Contoh: 2"></div>
+     <div class="frac-entry-row">
+      <label class="fraction-sign-control"><span>Tanda</span><select id="fracB_sign" aria-label="Posisi tanda pecahan kedua"><option value="plus">+ positif</option><option value="outside">− di depan</option><option value="numerator">− di pembilang</option><option value="denominator">− di penyebut</option></select></label>
+      <div class="frac-stack-input">
+       <input id="fracB_num" class="math-input" type="text" inputmode="numeric" autocomplete="off" value="3" aria-label="Pembilang pecahan kedua">
+       <span class="frac-input-line"></span>
+       <input id="fracB_den" class="math-input" type="text" inputmode="numeric" autocomplete="off" value="4" aria-label="Penyebut pecahan kedua">
+      </div>
+     </div>
+     <small class="muted">Angka bulat depan boleh dikosongkan jika tidak dipakai.</small>
+    </div>
+   </div>
+   <div class="field">
+    <label for="fracOp">Apa yang mau dilakukan?</label>
+    <select id="fracOp" class="math-input">
+     <option value="add">Tambah (+)</option><option value="sub">Kurang (−)</option><option value="mul">Kali (×)</option><option value="div">Bagi (÷)</option>
+    </select>
+   </div>
+   <div class="fraction-examples">
+    <span class="small muted">Contoh cepat:</span>
+    <button class="btn secondary fraction-example" data-frac-example="add">½ + ¾</button>
+    <button class="btn secondary fraction-example" data-frac-example="sub">⅚ − ⅓</button>
+    <button class="btn secondary fraction-example" data-frac-example="mixed">1 ½ + 2 ¼</button>
+    <button class="btn secondary fraction-example" data-frac-example="negative">−½ + ¾</button>
+   </div>
+  </div>
+
+  <div id="fracPowerFields" hidden>
+   <div class="fraction-input-card">
+    <h4>Basis pecahan</h4>
+    <div class="frac-entry-row">
+     <label class="fraction-sign-control"><span>Posisi minus</span><select id="fracPowerSign"><option value="plus">Tidak negatif</option><option value="outside">Minus di depan: −(a/b)ⁿ</option><option value="inside">Minus di dalam: (−a/b)ⁿ</option></select></label>
+     <div class="frac-stack-input">
+      <input id="fracPowerNum" class="math-input" type="text" inputmode="numeric" value="2" aria-label="Pembilang basis pangkat">
+      <span class="frac-input-line"></span>
+      <input id="fracPowerDen" class="math-input" type="text" inputmode="numeric" value="5" aria-label="Penyebut basis pangkat">
+     </div>
+    </div>
+    <div class="field"><label for="fracPowerExp">Pangkat n (boleh negatif atau nol)</label><input id="fracPowerExp" class="math-input" type="text" inputmode="numeric" value="3"></div>
+   </div>
+   <div class="fraction-examples">
+    <span class="small muted">Contoh cepat:</span>
+    <button class="btn secondary" data-frac-power-example="positive"> (2/5)³ </button>
+    <button class="btn secondary" data-frac-power-example="negative"> (2/5)⁻³ </button>
+    <button class="btn secondary" data-frac-power-example="outside"> −(2/5)² </button>
+    <button class="btn secondary" data-frac-power-example="inside"> (−2/5)³ </button>
+   </div>
+  </div>
+
+  <div id="fracRationalPowerFields" hidden>
+   <div class="fraction-input-card">
+    <h4>Basis dan pangkat pecahan</h4>
+    <div class="frac-entry-row">
+     <label class="fraction-sign-control"><span>Tanda basis</span><select id="fracRootSign"><option value="plus">Positif</option><option value="negative">Negatif</option></select></label>
+     <div class="frac-stack-input">
+      <input id="fracRootNum" class="math-input" type="text" inputmode="numeric" value="4" aria-label="Pembilang basis akar pangkat">
+      <span class="frac-input-line"></span>
+      <input id="fracRootDen" class="math-input" type="text" inputmode="numeric" value="9" aria-label="Penyebut basis akar pangkat">
+     </div>
+    </div>
+    <div class="power-fraction-exp">
+     <div class="field"><label for="fracRootM">Pangkat atas m</label><input id="fracRootM" class="math-input" type="text" inputmode="numeric" value="1"></div>
+     <div class="fraction-exp-slash">/</div>
+     <div class="field"><label for="fracRootN">Pangkat bawah n</label><input id="fracRootN" class="math-input" type="text" inputmode="numeric" value="2"></div>
+    </div>
+   </div>
+   <p class="small muted">Contoh: (4/9)¹⁄² = √(4/9) = 2/3. Akar genap dari bilangan negatif tidak menghasilkan bilangan real.</p>
+   <div class="fraction-examples">
+    <span class="small muted">Contoh cepat:</span>
+    <button class="btn secondary" data-frac-root-example="exact"> (4/9)¹⁄² </button>
+    <button class="btn secondary" data-frac-root-example="cube"> (−8/27)¹⁄³ </button>
+    <button class="btn secondary" data-frac-root-example="negative"> (4/9)⁻¹⁄² </button>
+   </div>
+  </div>
+
+  <div class="fraction-action-row">
+   <button class="btn" id="fractionCalculate" type="button">Hitung langkah demi langkah</button>
+   <button class="btn secondary" id="fractionReset" type="button">Ulangi</button>
+  </div>
+  <div id="fractionError" class="wizard-error" role="alert" hidden></div>
+  <div id="fractionOutput" class="fraction-result" aria-live="polite"></div>
+ </div>
+
+ <div class="panel">
+  <h3 class="panel-title">Aturan penting pecahan</h3>
+  <div class="fraction-rules">
+   <div><b>Tambah / kurang</b><span>Samakan penyebut, lalu hitung pembilangnya.</span></div>
+   <div><b>Kali</b><span>Kalikan pembilang dengan pembilang dan penyebut dengan penyebut.</span></div>
+   <div><b>Bagi</b><span>Balik pecahan kedua, lalu kalikan.</span></div>
+   <div><b>Pangkat negatif</b><span>Balik pecahan, lalu gunakan pangkat positif.</span></div>
+   <div><b>Pangkat genap / ganjil</b><span>Basis negatif berpangkat genap menjadi positif; pangkat ganjil tetap negatif.</span></div>
+   <div><b>Minus di depan</b><span>−(a/b), (−a)/b, dan a/(−b) memiliki nilai sama jika b bukan nol.</span></div>
+  </div>
  </div>
 </section>
+
 
 <section class="view" id="view-bugtest">
  <div class="page-head"><div><h2>Bug Test Bench</h2><p>Jalankan regresi otomatis untuk mesin matematika inti.</p></div><span class="pill">QA / Regression</span></div>
@@ -995,7 +1385,7 @@ input::placeholder,textarea::placeholder{color:var(--field-placeholder);opacity:
 </section>
 </main>
 </div>
-<div class="footer">MathSphere • Friendly Assistant 3.0 • Teman belajar matematika</div>
+<div class="footer">MathSphere • Friendly Assistant 5.2 • Teman belajar matematika</div>
 </div>
 <script>
 'use strict';
@@ -1108,11 +1498,12 @@ function routeFromTopic(raw){
  const q=(raw||'').toLowerCase().trim();
  if(!q)return {view:null,label:'Tulis satu kata atau topik dulu, ya.'};
  const routes=[
-  {view:'fractions',label:'Hitung pecahan',keys:['pecahan','pembilang','penyebut','1/2','3/4']},
+  {view:'fractions',label:'Hitung pecahan',keys:['pecahan','pembilang','penyebut','pecahan campuran','pecahan negatif','pecahan berpangkat','pangkat pecahan','operasi pecahan','1/2','3/4']},
   {view:'pythagoras',label:'Segitiga siku-siku',keys:['pythagoras','segitiga siku-siku','sisi miring','hipotenusa','tangga']},
-  {view:'smp-tools',label:'Data, peluang & bangun ruang',keys:['spldv','dua angka rahasia','dua persamaan','eliminasi','rata-rata','mean','median','modus','statistik','statistika','peluang','volume','luas permukaan','bangun ruang','kubus','balok','prisma','limas','tabung','kerucut','bola']},
+  {view:'powers',label:'Operasi bilangan berpangkat',keys:['operasi bilangan berpangkat','bilangan berpangkat','pangkat','eksponen','pangkat negatif','pangkat nol','pangkat pecahan','pangkat dari pangkat','aturan pangkat','eksponen','perpangkatan','basis sama','bentuk berpangkat','2 pangkat','perpangkatan']},
+  {view:'smp-tools',label:'Materi sekolah lainnya',keys:['spldv','dua angka rahasia','dua persamaan','eliminasi','rata-rata','mean','median','modus','statistik','statistika','peluang','volume','luas permukaan','bangun ruang','kubus','balok','prisma','limas','tabung','kerucut','bola','kuadrat','diskriminan','akar kembar','perbandingan','senilai','berbalik nilai','skala','diskon','untung','rugi','bruto','neto','tara','bunga','barisan','pola bilangan','bentuk akar','bentuk baku','sudut sehadap','sudut bertolak','garis sejajar']},
   {view:'solver',label:'Cari nilai yang belum diketahui',keys:['nilai x','persamaan','pertidaksamaan','plsv','ptlsv','cari x','akar persamaan']},
-  {view:'geometry',label:'Bangun datar & koordinat',keys:['geometri','segitiga','lingkaran','luas','keliling','koordinat','gradien','trapesium','sudut']},
+  {view:'geometry',label:'Bangun datar & koordinat',keys:['geometri','segitiga','lingkaran','luas segitiga','keliling','koordinat','gradien','trapesium','sudut segitiga']},
   {view:'units',label:'Ubah ukuran',keys:['konversi','satuan','cm ke','meter','kilogram','gram','suhu','celcius','fahrenheit']},
   {view:'calculator',label:'Hitung angka',keys:['hitung','kali','bagi','tambah','kurang','persen','akar']}
  ];
@@ -1603,8 +1994,21 @@ $('#clearCalc').onclick=()=>{pushCalcUndo(calcInput.value,calcCaret);$('#calcInp
 $('#degBtn').onclick=()=>setAngle('DEG');$('#radBtn').onclick=()=>setAngle('RAD');
 function setAngle(m){angleMode=m;$('#degBtn').classList.toggle('active',m==='DEG');$('#radBtn').classList.toggle('active',m==='RAD')}
 function factorial(n){if(!Number.isInteger(n)||n<0||n>170)throw Error('Faktorial hanya menerima bilangan bulat 0–170.');let r=1;for(let i=2;i<=n;i++)r*=i;return r}
-function tokenize(src){src=src.replace(/×/g,'*').replace(/[÷]/g,'/').replace(/[−–]/g,'-').replace(/π/g,'pi').replace(/√/g,'sqrt').replace(/\s+/g,'');const out=[];let i=0;while(i<src.length){let c=src[i];if(/[0-9.]/.test(c)){let m=src.slice(i).match(/^(?:\d+\.?\d*|\.\d+)(?:e[+-]?\d+)?/i);if(!m)throw Error('Format angka tidak valid.');out.push({t:'num',v:Number(m[0])});i+=m[0].length;continue}if(/[a-zA-Z_]/.test(c)){let m=src.slice(i).match(/^[a-zA-Z_][a-zA-Z_0-9]*/)[0];out.push({t:'id',v:m.toLowerCase()});i+=m.length;continue}if('+-*/^()%!,'.includes(c)){out.push({t:c,v:c});i++;continue}throw Error('Simbol tidak dikenali: '+c)}return out}
-function parseExpression(src,vars={}){let t=tokenize(src),p=0;const peek=()=>t[p],eat=x=>{if(peek()?.t===x){p++;return true}return false};function primary(){if(eat('+'))return primary();if(eat('-'))return -primary();if(eat('(')){let v=expr(0);if(!eat(')'))throw Error('Kurung tutup belum ada.');return v}let q=peek();if(!q)throw Error('Ekspresi belum lengkap.');if(q.t==='num'){p++;return q.v}if(q.t==='id'){p++;if(q.v==='pi')return Math.PI;if(q.v==='e')return Math.E;if(q.v==='ans')return ans;if(Object.prototype.hasOwnProperty.call(vars,q.v))return vars[q.v];if(['x','y','a','b','c','n'].includes(q.v))throw Error('Variabel '+q.v+' belum diberi nilai.');if(eat('(')){let a=expr(0);if(!eat(')'))throw Error('Kurung fungsi belum ditutup.');return callFn(q.v,a)}throw Error('Nama fungsi/konstanta tidak dikenal: '+q.v)}throw Error('Bagian ekspresi tidak valid.')}function callFn(n,x){let a=angleMode==='DEG'?x*Math.PI/180:x;switch(n){case'sin':return Math.sin(a);case'cos':return Math.cos(a);case'tan':return Math.tan(a);case'asin':return angleMode==='DEG'?Math.asin(x)*180/Math.PI:Math.asin(x);case'acos':return angleMode==='DEG'?Math.acos(x)*180/Math.PI:Math.acos(x);case'atan':return angleMode==='DEG'?Math.atan(x)*180/Math.PI:Math.atan(x);case'sinh':return Math.sinh(x);case'cosh':return Math.cosh(x);case'tanh':return Math.tanh(x);case'sqrt':if(x<0)throw Error('Akar real dari bilangan negatif tidak tersedia di kalkulator dasar.');return Math.sqrt(x);case'cbrt':return Math.cbrt(x);case'abs':return Math.abs(x);case'floor':return Math.floor(x);case'ceil':return Math.ceil(x);case'round':return Math.round(x);case'log':if(x<=0)throw Error('Logaritma real mensyaratkan x > 0.');return Math.log10(x);case'ln':if(x<=0)throw Error('Logaritma natural mensyaratkan x > 0.');return Math.log(x);case'log2':if(x<=0)throw Error('Logaritma real mensyaratkan x > 0.');return Math.log2(x);case'exp':return Math.exp(x);case'sign':return Math.sign(x);default:throw Error('Fungsi belum didukung: '+n)}}function expr(min){let left=primary();while(p<t.length){let op=peek().t,prec={'+':1,'-':1,'*':2,'/':2,'%':2,'^':4,'!':5}[op]||0;if(!prec||prec<min)break;p++;if(op==='!'){left=factorial(left);continue}let right=expr(prec+(op==='^'?0:1));if(op==='+')left+=right;else if(op==='-')left-=right;else if(op==='*')left*=right;else if(op==='/'){if(right===0)throw Error('Tidak bisa membagi dengan nol.');left/=right}else if(op==='%')left%=right;else if(op==='^')left=Math.pow(left,right)}return left}let value=expr(0);if(p<t.length)throw Error('Ada bagian ekspresi yang belum terbaca.');if(!Number.isFinite(value))throw Error('Hasil tidak terdefinisi dalam bilangan real.');return value}
+function tokenize(src){src=src.replace(/×/g,'*').replace(/[÷]/g,'/').replace(/[−–]/g,'-').replace(/π/g,'pi').replace(/√/g,'sqrt').replace(/\s+/g,'');const out=[];let i=0;while(i<src.length){let c=src[i];if(/[0-9.]/.test(c)){let m=src.slice(i).match(/^(?:\d+\.?\d*|\.\d+)(?:e[+-]?\d+)?/i);if(!m)throw Error('Format angka tidak valid.');out.push({t:'num',v:Number(m[0])});i+=m[0].length;continue}if(/[a-zA-Z_]/.test(c)){let m=src.slice(i).match(/^[a-zA-Z_][a-zA-Z_0-9]*/)[0];out.push({t:'id',v:m.toLowerCase()});i+=m.length;continue}if('+-*/^()%!,'.includes(c)){out.push({t:c,v:c});i++;continue}throw Error('Simbol tidak dikenali: '+c)}
+ const functionNames=new Set(['sin','cos','tan','asin','acos','atan','sinh','cosh','tanh','sqrt','cbrt','abs','floor','ceil','round','log','ln','log2','exp','sign']);
+ const expanded=[];
+ for(let k=0;k<out.length;k++){
+  const current=out[k],previous=expanded[expanded.length-1];
+  if(previous){
+   const prevEnds=previous.t==='num'||previous.t===')'||previous.t==='!';
+   const currStarts=current.t==='num'||current.t==='id'||current.t==='(';
+   const idThenParen=previous.t==='id'&&current.t==='('&&!functionNames.has(previous.v);
+   if((prevEnds&&currStarts)||idThenParen)expanded.push({t:'*',v:'*'});
+  }
+  expanded.push(current);
+ }
+ return expanded}
+function parseExpression(src,vars={}){let t=tokenize(src),p=0;const peek=()=>t[p],eat=x=>{if(peek()?.t===x){p++;return true}return false};function primary(){if(eat('+'))return expr(3);if(eat('-'))return -expr(3);if(eat('(')){let v=expr(0);if(!eat(')'))throw Error('Kurung tutup belum ada.');return v}let q=peek();if(!q)throw Error('Ekspresi belum lengkap.');if(q.t==='num'){p++;return q.v}if(q.t==='id'){p++;if(q.v==='pi')return Math.PI;if(q.v==='e')return Math.E;if(q.v==='ans')return ans;if(Object.prototype.hasOwnProperty.call(vars,q.v))return vars[q.v];if(['x','y','a','b','c','n'].includes(q.v))throw Error('Variabel '+q.v+' belum diberi nilai.');if(eat('(')){let a=expr(0);if(!eat(')'))throw Error('Kurung fungsi belum ditutup.');return callFn(q.v,a)}throw Error('Nama fungsi/konstanta tidak dikenal: '+q.v)}throw Error('Bagian ekspresi tidak valid.')}function callFn(n,x){let a=angleMode==='DEG'?x*Math.PI/180:x;switch(n){case'sin':return Math.sin(a);case'cos':return Math.cos(a);case'tan':return Math.tan(a);case'asin':return angleMode==='DEG'?Math.asin(x)*180/Math.PI:Math.asin(x);case'acos':return angleMode==='DEG'?Math.acos(x)*180/Math.PI:Math.acos(x);case'atan':return angleMode==='DEG'?Math.atan(x)*180/Math.PI:Math.atan(x);case'sinh':return Math.sinh(x);case'cosh':return Math.cosh(x);case'tanh':return Math.tanh(x);case'sqrt':if(x<0)throw Error('Akar real dari bilangan negatif tidak tersedia di kalkulator dasar.');return Math.sqrt(x);case'cbrt':return Math.cbrt(x);case'abs':return Math.abs(x);case'floor':return Math.floor(x);case'ceil':return Math.ceil(x);case'round':return Math.round(x);case'log':if(x<=0)throw Error('Logaritma real mensyaratkan x > 0.');return Math.log10(x);case'ln':if(x<=0)throw Error('Logaritma natural mensyaratkan x > 0.');return Math.log(x);case'log2':if(x<=0)throw Error('Logaritma real mensyaratkan x > 0.');return Math.log2(x);case'exp':return Math.exp(x);case'sign':return Math.sign(x);default:throw Error('Fungsi belum didukung: '+n)}}function expr(min){let left=primary();while(p<t.length){let op=peek().t,prec={'+':1,'-':1,'*':2,'/':2,'%':2,'^':4,'!':5}[op]||0;if(!prec||prec<min)break;p++;if(op==='!'){left=factorial(left);continue}let right=expr(prec+(op==='^'?0:1));if(op==='+')left+=right;else if(op==='-')left-=right;else if(op==='*')left*=right;else if(op==='/'){if(right===0)throw Error('Tidak bisa membagi dengan nol.');left/=right}else if(op==='%')left%=right;else if(op==='^')left=Math.pow(left,right)}return left}let value=expr(0);if(p<t.length)throw Error('Ada bagian ekspresi yang belum terbaca.');if(!Number.isFinite(value))throw Error('Hasil tidak terdefinisi dalam bilangan real.');return value}
 function pretty(n){if(n===0)n=0;return Number(n.toPrecision(12)).toString()}
 function addHistory(expr,result){history.unshift({expr,result,time:new Date().toLocaleTimeString('id-ID',{hour:'2-digit',minute:'2-digit'})});renderHistory()}
 function calculate(){
@@ -1786,27 +2190,304 @@ $('#complexCalculate').onclick=()=>{
 
 
 // MathSphere 3.0 — exact fraction, quadratic factoring, synthetic division, radical simplifier, regression tests.
-function gcdBig(a,b){a=a<0n?-a:a;b=b<0n?-b:b;while(b){let t=a%b;a=b;b=t}return a||1n}
-function rational(n,d){if(d===0n)throw Error('Penyebut tidak boleh nol.');if(d<0n){n=-n;d=-d}let g=gcdBig(n,d);return {n:n/g,d:d/g}}
-function readBigIntField(id){let v=$('#'+id).value.trim();if(!/^[+-]?\d+$/.test(v))throw Error('Masukkan bilangan bulat pada semua kolom pecahan.');return BigInt(v)}
-function rationalOp(a,b,op){if(op==='add')return rational(a.n*b.d+b.n*a.d,a.d*b.d);if(op==='sub')return rational(a.n*b.d-b.n*a.d,a.d*b.d);if(op==='mul')return rational(a.n*b.n,a.d*b.d);if(b.n===0n)throw Error('Tidak bisa membagi dengan pecahan nol.');return rational(a.n*b.d,a.d*b.n)}
-function rationalText(r){if(r.d===1n)return String(r.n);let sign=r.n<0n?'-':'',n=r.n<0n?-r.n:r.n;return sign+n+'/'+r.d}
-$$('.fraction-example').forEach(b=>b.addEventListener('click',()=>{
- const parse=v=>v.split('/').map(Number);
- const [an,ad]=parse(b.dataset.a),[bn,bd]=parse(b.dataset.b);
- $('#fracA_num').value=an;$('#fracA_den').value=ad;$('#fracB_num').value=bn;$('#fracB_den').value=bd;$('#fracOp').value=b.dataset.op;
+
+// FRACTION ENGINE 2.0 — exact rational arithmetic for integer inputs.
+const FRACTION_MAX_INPUT_DIGITS=30;
+const FRACTION_MAX_EXPONENT=100;
+const FRACTION_MAX_RESULT_DIGITS=5000;
+
+function gcdBig(a,b){
+ a=a<0n?-a:a;b=b<0n?-b:b;
+ while(b!==0n){const t=a%b;a=b;b=t}
+ return a||1n;
+}
+function rational(n,d=1n){
+ if(d===0n)throw Error('Penyebut tidak boleh nol. Ganti dengan angka selain 0.');
+ if(d<0n){n=-n;d=-d}
+ if(n===0n)return {n:0n,d:1n};
+ const g=gcdBig(n,d);
+ return {n:n/g,d:d/g};
+}
+function fractionCheckSize(n){
+ const digits=(n<0n?-n:n).toString().length;
+ if(digits>FRACTION_MAX_RESULT_DIGITS)throw Error(`Hasil terlalu besar (lebih dari ${FRACTION_MAX_RESULT_DIGITS.toLocaleString('id-ID')} digit). Kurangi nilai atau pangkat agar HP tetap lancar.`);
+ return n;
+}
+function readFractionInteger(id,label,{allowEmpty=false,defaultValue='0'}={}){
+ const raw=$('#'+id).value.trim();
+ if(raw===''&&allowEmpty)return BigInt(defaultValue);
+ if(!/^[+-]?\d+$/.test(raw))throw Error(`${label}: masukkan bilangan bulat tanpa koma atau titik.`);
+ if(raw.replace(/^[+-]/,'').length>FRACTION_MAX_INPUT_DIGITS)throw Error(`${label}: maksimal ${FRACTION_MAX_INPUT_DIGITS} digit.`);
+ return BigInt(raw);
+}
+function fractionReadSign(id){
+ const v=$('#'+id).value;
+ return v==='plus'?1n:-1n;
+}
+function fractionFromParts(whole,num,den,sign=1n){
+ if(den===0n)throw Error('Penyebut tidak boleh nol.');
+ if(whole<0n||num<0n||den<0n)throw Error('Masukkan besar angka tanpa tanda minus. Pilih posisi tanda pada menu Tanda.');
+ const magnitude=whole*den+num;
+ fractionCheckSize(magnitude);
+ return rational(sign*magnitude,den);
+}
+function fractionFromFields(prefix, mixed=false){
+ const num=readFractionInteger(prefix+'_num','Pembilang',{defaultValue:'0'});
+ const den=readFractionInteger(prefix+'_den','Penyebut');
+ const whole=mixed?readFractionInteger(prefix+'_whole','Angka bulat depan',{allowEmpty:true,defaultValue:'0'}):0n;
+ return fractionFromParts(whole,num,den,fractionReadSign(prefix+'_sign'));
+}
+function fractionMultiply(a,b){
+ const g1=gcdBig(a.n,b.d),g2=gcdBig(b.n,a.d);
+ return rational(fractionCheckSize((a.n/g1)*(b.n/g2)),fractionCheckSize((a.d/g2)*(b.d/g1)));
+}
+function fractionDivide(a,b){
+ if(b.n===0n)throw Error('Tidak bisa membagi dengan pecahan nol.');
+ return fractionMultiply(a,rational(b.d,b.n));
+}
+function rationalOp(a,b,op){
+ if(op==='add')return rational(fractionCheckSize(a.n*b.d+b.n*a.d),fractionCheckSize(a.d*b.d));
+ if(op==='sub')return rational(fractionCheckSize(a.n*b.d-b.n*a.d),fractionCheckSize(a.d*b.d));
+ if(op==='mul')return fractionMultiply(a,b);
+ if(op==='div')return fractionDivide(a,b);
+ throw Error('Operasi pecahan tidak dikenal.');
+}
+function rationalText(r){
+ if(r.d===1n)return String(r.n);
+ const sign=r.n<0n?'−':'',n=r.n<0n?-r.n:r.n;
+ return sign+n.toString()+'/'+r.d.toString();
+}
+function fractionStackHTML(n,d,sign=''){
+ return `<span class="frac-display">${sign?`<span class="frac-display-sign">${escapeHtml(sign)}</span>`:''}<span class="frac-display-stack"><span class="frac-display-num">${escapeHtml(String(n))}</span><span class="frac-display-bar"></span><span class="frac-display-den">${escapeHtml(String(d))}</span></span></span>`;
+}
+function fractionDisplay(r){
+ const sign=r.n<0n?'−':'',n=r.n<0n?-r.n:r.n;
+ return fractionStackHTML(n.toString(),r.d.toString(),sign);
+}
+function fractionMixedDisplay(r){
+ const sign=r.n<0n?'−':'',n=r.n<0n?-r.n:r.n;
+ const whole=n/r.d,rem=n%r.d;
+ if(rem===0n)return `<span class="frac-mixed">${sign}${whole.toString()}</span>`;
+ if(whole===0n)return fractionDisplay(r);
+ return `<span class="frac-mixed">${sign}${whole.toString()}</span>${fractionStackHTML(rem.toString(),r.d.toString())}`;
+}
+function fractionDecimal(r){
+ const value=Number(r.n)/Number(r.d);
+ if(!Number.isFinite(value))return null;
+ if(Math.abs(value)>1e15||Math.abs(value)!==0&&Math.abs(value)<1e-12)return null;
+ return Number(value.toPrecision(12)).toString();
+}
+function fractionPow(r,exponent){
+ if(!Number.isInteger(exponent)||Math.abs(exponent)>FRACTION_MAX_EXPONENT)throw Error(`Pangkat harus bilangan bulat antara −${FRACTION_MAX_EXPONENT} sampai ${FRACTION_MAX_EXPONENT}.`);
+ if(r.n===0n&&exponent<=0)throw Error(exponent===0?'0⁰ tidak terdefinisi.':'Pecahan nol tidak boleh diberi pangkat negatif.');
+ if(exponent===0)return rational(1n,1n);
+ const e=Math.abs(exponent);
+ let top=1n,bottom=1n,baseN=r.n<0n?-r.n:r.n,baseD=r.d,pow=e;
+ while(pow>0){
+  if(pow%2===1){top*=baseN;bottom*=baseD;fractionCheckSize(top);fractionCheckSize(bottom)}
+  pow=Math.floor(pow/2);
+  if(pow>0){baseN*=baseN;baseD*=baseD;fractionCheckSize(baseN);fractionCheckSize(baseD)}
+ }
+ const sign=r.n<0n&&e%2===1?-1n:1n;
+ const result=rational(sign*top,bottom);
+ return exponent<0?fractionDivide(rational(1n),result):result;
+}
+function fractionNthRootExact(value,degree){
+ if(value<0n||!Number.isInteger(degree)||degree<1)return null;
+ if(value===0n||value===1n||degree===1)return value;
+ if(degree>100)return null;
+ let low=0n,high=1n;
+ const powLimited=(base,exp,limit)=>{
+  let out=1n;
+  for(let i=0;i<exp;i++){out*=base;if(out>limit)return out}
+  return out;
+ };
+ while(powLimited(high,degree,value)<value)high*=2n;
+ while(low+1n<high){
+  const mid=(low+high)/2n,cmp=powLimited(mid,degree,value);
+  if(cmp===value)return mid;
+  if(cmp<value)low=mid;else high=mid;
+ }
+ if(powLimited(low,degree,value)===value)return low;
+ if(powLimited(high,degree,value)===value)return high;
+ return null;
+}
+function fractionRationalExponent(base,m,n){
+ if(!Number.isInteger(m)||!Number.isInteger(n)||n<=0||Math.abs(m)>FRACTION_MAX_EXPONENT||n>100)throw Error('Pangkat atas harus bilangan bulat dalam batas aman; pangkat bawah harus 1 sampai 100.');
+ if(m===0&&base.n===0n)throw Error('0⁰ tidak terdefinisi.');
+ if(base.n===0n&&m<0)throw Error('Pecahan nol tidak boleh memiliki pangkat negatif.');
+ const g=Number(gcdBig(BigInt(Math.abs(m)),BigInt(n)));
+ m/=g;n/=g;
+ if(base.n<0n&&n%2===0)throw Error('Basis negatif dengan pangkat berpenyebut genap tidak menghasilkan bilangan real.');
+ const absN=base.n<0n?-base.n:base.n;
+ const rootN=fractionNthRootExact(absN,n),rootD=fractionNthRootExact(base.d,n);
+ if(rootN!==null&&rootD!==null){
+  const rootSign=base.n<0n&&n%2===1?-1n:1n;
+  return {exact:fractionPow(rational(rootSign*rootN,rootD),m),approx:null,m,n,rootExact:true};
+ }
+ let numericBase=Number(base.n)/Number(base.d);
+ if(!Number.isFinite(numericBase)||numericBase===0)throw Error('Nilai basis berada di luar jangkauan desimal standar. Hasil realnya tidak nol, tetapi perlu metode angka besar untuk pendekatan.');
+ let approx=Math.pow(Math.abs(numericBase),m/n);
+ if(base.n<0n&&n%2===1&&Math.abs(m)%2===1)approx=-approx;
+ if(!Number.isFinite(approx))throw Error('Nilai pendekatan terlalu besar atau tidak dapat dihitung.');
+ return {exact:null,approx,m,n,rootExact:false};
+}
+function fractionRenderSteps(steps){
+ return `<div class="fraction-steps">${steps.map((s,i)=>`<div class="fraction-step ${i%2?'fraction-step-note':'fraction-step-math'}"><div class="fraction-step-kicker">LANGKAH ${i+1} · ${escapeHtml(s.title)}</div><div class="fraction-step-body">${s.html||escapeHtml(s.text||'')}</div>${s.note?`<p>${escapeHtml(s.note)}</p>`:''}</div>`).join('')}</div>`;
+}
+function fractionResultHTML(result,steps,expression,extra=''){
+ const decimal=fractionDecimal(result);
+ return `<div class="fraction-output-card"><div class="fraction-output-label">BENTUK PECAHAN PALING SEDERHANA</div><div class="fraction-large">${fractionDisplay(result)}</div><div class="fraction-exact-text">${escapeHtml(rationalText(result))}</div>${result.d!==1n&&result.n!==0n?`<div class="fraction-mixed-line"><span>Bentuk campuran:</span>${fractionMixedDisplay(result)}</div>`:''}${decimal!==null?`<div class="fraction-decimal">Nilai desimal ≈ ${escapeHtml(decimal)}</div>`:''}${extra}</div><div class="fraction-expression"><b>Soal:</b> ${escapeHtml(expression)}</div>${fractionRenderSteps(steps)}<div class="fraction-copy-row"><button class="btn secondary" data-copy-fraction="true" type="button">Salin hasil</button><span class="small muted" id="fractionCopyStatus" aria-live="polite"></span></div>`;
+}
+function fractionBasicCalculate(){
+ const mixed=$('#fracInputType').value==='mixed';
+ const a=fractionFromFields('fracA',mixed),b=fractionFromFields('fracB',mixed),op=$('#fracOp').value;
+ const symbols={add:'+',sub:'−',mul:'×',div:'÷'},steps=[];
+ const expression=`${rationalText(a)} ${symbols[op]} ${rationalText(b)}`;
+ let rawN,rawD,result;
+ if(op==='add'||op==='sub'){
+  const common=a.d/gcdBig(a.d,b.d)*b.d;
+  const left=a.n*(common/a.d),right=b.n*(common/b.d);
+  rawN=op==='add'?left+right:left-right;rawD=common;
+  steps.push({title:'Samakan penyebut',text:`KPK dari ${a.d} dan ${b.d} adalah ${common}.`});
+  steps.push({title:'Ubah pecahan ke penyebut yang sama',html:`${fractionStackHTML(left.toString(),common.toString())} ${symbols[op]} ${fractionStackHTML(right.toString(),common.toString())}`});
+  steps.push({title:op==='add'?'Jumlahkan pembilang':'Kurangkan pembilang',text:`${left.toString()} ${symbols[op]} ${right.toString()} = ${rawN.toString()}. Penyebut tetap ${common.toString()}.`});
+ }else if(op==='mul'){
+  rawN=a.n*b.n;rawD=a.d*b.d;
+  steps.push({title:'Kalikan pembilang',text:`${a.n.toString()} × ${b.n.toString()} = ${rawN.toString()}.`});
+  steps.push({title:'Kalikan penyebut',text:`${a.d.toString()} × ${b.d.toString()} = ${rawD.toString()}.`});
+ }else{
+  if(b.n===0n)throw Error('Pecahan kedua bernilai nol. Pembagian dengan nol tidak bisa dilakukan.');
+  steps.push({title:'Balik pecahan kedua',html:`${fractionDisplay(a)} ÷ ${fractionDisplay(b)} menjadi ${fractionDisplay(a)} × ${fractionDisplay(rational(b.d,b.n))}.`});
+  rawN=a.n*b.d;rawD=a.d*b.n;
+  steps.push({title:'Kalikan seperti biasa',text:`Pembilang: ${a.n.toString()} × ${b.d.toString()} = ${rawN.toString()}. Penyebut: ${a.d.toString()} × ${b.n.toString()} = ${rawD.toString()}.`});
+ }
+ fractionCheckSize(rawN);fractionCheckSize(rawD);
+ const before=rational(rawN,rawD),g=gcdBig(rawN,rawD);
+ result=before;
+ steps.push({title:'Sederhanakan dengan FPB',text:g===1n?'FPB pembilang dan penyebut adalah 1, jadi pecahan sudah paling sederhana.':`FPB(${rawN.toString()}, ${rawD.toString()}) = ${g.toString()}. Bagi pembilang dan penyebut dengan ${g.toString()}.`});
+ steps.push({title:'Periksa tanda negatif',text:'Tanda minus di depan pecahan, di pembilang, atau di penyebut menunjukkan nilai yang sama. Hasil ditulis dengan satu tanda minus di depan.'});
+ return {result,steps,expression};
+}
+function fractionPowerCalculate(){
+ const n=readFractionInteger('fracPowerNum','Pembilang basis'),d=readFractionInteger('fracPowerDen','Penyebut basis');
+ if(n<0n||d<=0n)throw Error('Isi pembilang tanpa minus dan penyebut harus lebih besar dari nol.');
+ const expRaw=readFractionInteger('fracPowerExp','Pangkat n');
+ if(expRaw>BigInt(FRACTION_MAX_EXPONENT)||expRaw<BigInt(-FRACTION_MAX_EXPONENT))throw Error(`Pangkat harus antara −${FRACTION_MAX_EXPONENT} sampai ${FRACTION_MAX_EXPONENT}.`);
+ const exp=Number(expRaw),position=$('#fracPowerSign').value;
+ let base=rational(position==='inside'?-n:n,d),result=fractionPow(base,exp),steps=[];
+ const expression=position==='outside'?`−(${n.toString()}/${d.toString()})${exp}`:position==='inside'?`(−${n.toString()}/${d.toString()})${exp}`:`(${n.toString()}/${d.toString()})${exp}`;
+ steps.push({title:'Tentukan posisi tanda minus',text:position==='outside'?'Minus berada di luar kurung, jadi tanda negatif diterapkan pada hasil akhir.':position==='inside'?'Minus menjadi bagian dari basis pecahan. Pangkat genap membuat hasil positif; pangkat ganjil mempertahankan tanda negatif.':'Basis pecahan bernilai positif.'});
+ if(exp<0)steps.push({title:'Balik pecahan karena pangkat negatif',html:`${fractionDisplay(base)}<sup>${exp}</sup> = ${fractionDisplay(rational(base.d,base.n))}<sup>${-exp}</sup>`});
+ if(exp===0)steps.push({title:'Gunakan pangkat nol',text:'Setiap basis bukan nol yang berpangkat nol bernilai 1.'});
+ else steps.push({title:'Pangkatkan pembilang dan penyebut',text:`${n.toString()} dipangkatkan ${exp}; ${d.toString()} juga dipangkatkan ${exp}.`});
+ if(position==='outside')result=rational(-result.n,result.d);
+ steps.push({title:'Sederhanakan hasil',text:`FPB digunakan untuk mendapatkan pecahan paling sederhana: ${rationalText(result)}.`});
+ return {result,steps,expression};
+}
+function fractionRootPowerCalculate(){
+ const num=readFractionInteger('fracRootNum','Pembilang basis'),den=readFractionInteger('fracRootDen','Penyebut basis');
+ if(num<0n||den<=0n)throw Error('Isi besar pembilang tanpa minus dan penyebut harus lebih besar dari nol.');
+ const sign=$('#fracRootSign').value==='negative'?-1n:1n,base=rational(sign*num,den);
+ const mRaw=readFractionInteger('fracRootM','Pangkat atas m'),nRaw=readFractionInteger('fracRootN','Pangkat bawah n');
+ if(mRaw>BigInt(FRACTION_MAX_EXPONENT)||mRaw<BigInt(-FRACTION_MAX_EXPONENT))throw Error(`Pangkat atas harus antara −${FRACTION_MAX_EXPONENT} sampai ${FRACTION_MAX_EXPONENT}.`);
+ if(nRaw<=0n||nRaw>100n)throw Error('Pangkat bawah harus bilangan bulat dari 1 sampai 100.');
+ const result=fractionRationalExponent(base,Number(mRaw),Number(nRaw));
+ const expText=`${result.m}/${result.n}`,expression=`(${rationalText(base)})^(${expText})`;
+ const steps=[];
+ steps.push({title:'Baca pangkat pecahan',text:`Pangkat ${expText} berarti akar pangkat ${result.n}, lalu dipangkatkan ${result.m}.`});
+ if(result.rootExact){
+  steps.push({title:'Cari akar pembilang dan penyebut',text:'Akar pembilang dan penyebut merupakan bilangan bulat tepat, jadi hasil dapat ditulis sebagai pecahan eksak.'});
+  steps.push({title:'Hitung pangkat dan sederhanakan',text:`Hasil tepat = ${rationalText(result.exact)}.`});
+  return {result:result.exact,steps,expression};
+ }
+ steps.push({title:'Periksa apakah akarnya tepat',text:'Pembilang atau penyebut bukan pangkat sempurna untuk derajat akar ini, sehingga hasil eksak tidak dapat ditulis sebagai pecahan rasional sederhana.'});
+ steps.push({title:'Tampilkan nilai pendekatan',text:`Hasil pendekatan ≈ ${Number(result.approx.toPrecision(12)).toString()}. Nilai ini merupakan pendekatan desimal, bukan pecahan eksak.`});
+ return {result:null,approx:result.approx,steps,expression};
+}
+function fractionRender(){
+ const mode=$('#fracMode').value;
+ $('#fracBasicFields').hidden=mode!=='basic';
+ $('#fracPowerFields').hidden=mode!=='power';
+ $('#fracRationalPowerFields').hidden=mode!=='rational-power';
+ $('#fractionOutput').innerHTML='';$('#fractionError').hidden=true;
+ if(mode==='basic')fractionToggleMixed();
+}
+function fractionToggleMixed(){
+ const mixed=$('#fracInputType').value==='mixed';
+ document.querySelectorAll('.frac-whole-field').forEach(el=>el.hidden=!mixed);
+}
+$('#fracMode').addEventListener('change',fractionRender);
+$('#fracInputType').addEventListener('change',fractionToggleMixed);
+fractionRender();
+$('#fractionCalculate').addEventListener('click',()=>{
+ const error=$('#fractionError'),out=$('#fractionOutput');
+ error.hidden=true;error.textContent='';out.innerHTML='';
+ try{
+  const mode=$('#fracMode').value;
+  const r=mode==='basic'?fractionBasicCalculate():mode==='power'?fractionPowerCalculate():fractionRootPowerCalculate();
+  if(r.result){
+   out.innerHTML=fractionResultHTML(r.result,r.steps,r.expression);
+  }else{
+   out.innerHTML=`<div class="fraction-output-card"><div class="fraction-output-label">NILAI PENDEKATAN · BUKAN PECAHAN EKSAK</div><div class="fraction-large fraction-approx">${escapeHtml(Number(r.approx.toPrecision(12)).toString())}</div></div><div class="fraction-expression"><b>Soal:</b> ${escapeHtml(r.expression)}</div>${fractionRenderSteps(r.steps)}<div class="fraction-copy-row"><button class="btn secondary" data-copy-fraction="true" type="button">Salin hasil</button></div>`;
+  }
+ }catch(e){error.textContent=e.message||'Periksa kembali angka yang dimasukkan.';error.hidden=false}
+});
+$('#fractionReset').addEventListener('click',()=>{
+ $('#fracMode').value='basic';$('#fracInputType').value='ordinary';
+ ['fracA_whole','fracB_whole'].forEach(id=>$('#'+id).value='');
+ $('#fracA_num').value='1';$('#fracA_den').value='2';$('#fracB_num').value='3';$('#fracB_den').value='4';
+ ['fracA_sign','fracB_sign'].forEach(id=>$('#'+id).value='plus');
+ $('#fracOp').value='add';$('#fracPowerNum').value='2';$('#fracPowerDen').value='5';$('#fracPowerExp').value='3';$('#fracPowerSign').value='plus';
+ $('#fracRootNum').value='4';$('#fracRootDen').value='9';$('#fracRootSign').value='plus';$('#fracRootM').value='1';$('#fracRootN').value='2';
+ fractionRender();
+});
+$$('.fraction-example').forEach(btn=>btn.addEventListener('click',()=>{
+ $('#fracMode').value='basic';fractionRender();
+ const examples={
+  add:{a:[0,1,2,'plus'],b:[0,3,4,'plus'],op:'add'},
+  sub:{a:[0,5,6,'plus'],b:[0,1,3,'plus'],op:'sub'},
+  mixed:{a:[1,1,2,'plus'],b:[2,1,4,'plus'],op:'add'},
+  negative:{a:[0,1,2,'outside'],b:[0,3,4,'plus'],op:'add'}
+ };
+ const e=examples[btn.dataset.fracExample];if(!e)return;
+ for(const [prefix,v] of [['fracA',e.a],['fracB',e.b]]){
+  $('#'+prefix+'_whole').value=v[0]||'';$('#'+prefix+'_num').value=v[1];$('#'+prefix+'_den').value=v[2];$('#'+prefix+'_sign').value=v[3];
+ }
+ $('#fracInputType').value=btn.dataset.fracExample==='mixed'?'mixed':'ordinary';fractionToggleMixed();
+ $('#fracOp').value=e.op;$('#fractionCalculate').click();
+}));
+$$('[data-frac-power-example]').forEach(btn=>btn.addEventListener('click',()=>{
+ const configs={
+  positive:{sign:'plus',exp:'3'},negative:{sign:'plus',exp:'-3'},
+  outside:{sign:'outside',exp:'2'},inside:{sign:'inside',exp:'3'}
+ };
+ const e=configs[btn.dataset.fracPowerExample];$('#fracMode').value='power';fractionRender();
+ $('#fracPowerNum').value='2';$('#fracPowerDen').value='5';$('#fracPowerSign').value=e.sign;$('#fracPowerExp').value=e.exp;
  $('#fractionCalculate').click();
 }));
-$('#fractionCalculate').onclick=()=>{
- const out=$('#fractionOutput');
+$$('[data-frac-root-example]').forEach(btn=>btn.addEventListener('click',()=>{
+ const configs={
+  exact:{sign:'plus',num:'4',den:'9',m:'1',n:'2'},
+  cube:{sign:'negative',num:'8',den:'27',m:'1',n:'3'},
+  negative:{sign:'plus',num:'4',den:'9',m:'-1',n:'2'}
+ };
+ const e=configs[btn.dataset.fracRootExample];$('#fracMode').value='rational-power';fractionRender();
+ $('#fracRootSign').value=e.sign;$('#fracRootNum').value=e.num;$('#fracRootDen').value=e.den;$('#fracRootM').value=e.m;$('#fracRootN').value=e.n;
+ $('#fractionCalculate').click();
+}));
+document.addEventListener('click',async e=>{
+ const btn=e.target.closest('[data-copy-fraction]');if(!btn)return;
+ const output=$('#fractionOutput'),text=output.innerText||output.textContent||'';
+ if(!text.trim())return;
  try{
-  const a=rational(readBigIntField('fracA_num'),readBigIntField('fracA_den'));
-  const b=rational(readBigIntField('fracB_num'),readBigIntField('fracB_den'));
-  const op=$('#fracOp').value,r=rationalOp(a,b,op),sym={add:'+',sub:'−',mul:'×',div:'÷'}[op];
-  let mixed='';if(r.d!==1n&&r.n!==0n){let whole=r.n/r.d,rem=r.n%r.d;if(whole!==0n)mixed=` = ${whole} ${rem<0n?-rem:rem}/${r.d}`}
-  out.innerHTML=`<div class="small">HASIL PECAHAN EKSAK</div><div style="font-size:23px;font-weight:850">${rationalText(r)}${mixed}</div><div class="small" style="margin-top:6px">${rationalText(a)} ${sym} ${rationalText(b)} = ${rationalText(r)}. Pecahan telah disederhanakan dengan FPB.</div>`;
- }catch(e){out.innerHTML=`<span style="color:#b83c4b">${escapeHtml(e.message)}</span>`}
-};
+  if(navigator.clipboard&&navigator.clipboard.writeText)await navigator.clipboard.writeText(text);
+  else{const area=document.createElement('textarea');area.value=text;area.style.position='fixed';area.style.opacity='0';document.body.appendChild(area);area.select();document.execCommand('copy');area.remove()}
+  const status=$('#fractionCopyStatus');if(status)status.textContent='Hasil tersalin.';
+  btn.textContent='Tersalin ✓';
+ }catch(_){btn.textContent='Salin tidak tersedia'}
+});
+
 function integerFactors(n){let a=[];n=Math.abs(n);if(n===0)return [0];for(let i=1;i<=Math.sqrt(n);i++)if(n%i===0){a.push(i);if(i!==n/i)a.push(n/i)}return a}
 $('#factorBtn').onclick=()=>{
  const out=$('#factorOutput');
@@ -1886,7 +2567,9 @@ function calculateSolid(type,v){
  let area,volume,detail=[];
  if(type==='cube'){const a=v.a;area=6*a*a;volume=a**3;detail=['Luas permukaan = 6s²','Volume = s³']}
  else if(type==='cuboid'){const {a,b,c}=v;area=2*(a*b+a*c+b*c);volume=a*b*c;detail=['Luas permukaan = 2(pl + pt + lt)','Volume = p × l × t']}
- else if(type==='prism'){const {a,b,L}=v,hyp=Math.hypot(a,b),base=a*b/2,per=a+b+hyp;area=2*base+per*L;volume=base*L;detail=['Luas alas segitiga siku-siku = ½ab','Luas permukaan = 2 × luas alas + keliling alas × panjang prisma','Volume = luas alas × panjang prisma']}
+ else if(type==='prism'){const {a,b,c,L}=v;if(a+b<=c||a+c<=b||b+c<=a)throw Error('Tiga sisi alas belum membentuk segitiga. Pastikan jumlah dua sisi lebih besar dari sisi ketiga.');const semi=(a+b+c)/2,base=Math.sqrt(Math.max(0,semi*(semi-a)*(semi-b)*(semi-c))),per=a+b+c;area=2*base+per*L;volume=base*L;detail=['Luas alas segitiga dihitung dengan rumus Heron','Luas permukaan = 2 × luas alas + keliling alas × panjang prisma','Volume = luas alas × panjang prisma']}
+ else if(type==='squarePyramid'){const {a,h}=v,slant=Math.hypot(h,a/2),base=a*a;area=base+2*a*slant;volume=base*h/3;detail=['Tinggi sisi tegak = √(tinggi² + (½ sisi alas)²)','Luas permukaan = luas alas + 4 × luas satu sisi segitiga','Volume = ⅓ × luas alas × tinggi']}
+ else if(type==='triPyramid'){const {a,h}=v,base=Math.sqrt(3)*a*a/4,apothem=a/(2*Math.sqrt(3)),slant=Math.hypot(h,apothem);area=base+1.5*a*slant;volume=base*h/3;detail=['Alas segitiga sama sisi = √3/4 × s²','Tinggi sisi tegak dihitung dari tinggi limas dan jarak pusat alas ke sisi','Volume = ⅓ × luas alas × tinggi']}
  else if(type==='cylinder'){const {r,h}=v;area=2*Math.PI*r*(r+h);volume=Math.PI*r*r*h;detail=['Luas permukaan = 2πr(r + t)','Volume = πr²t']}
  else if(type==='cone'){const {r,h}=v,l=Math.hypot(r,h);area=Math.PI*r*(r+l);volume=Math.PI*r*r*h/3;detail=['Garis pelukis l = √(r² + t²)','Luas permukaan = πr(r + l)','Volume = ⅓πr²t']}
  else if(type==='sphere'){const r=v.r;area=4*Math.PI*r*r;volume=4*Math.PI*r*r*r/3;detail=['Luas permukaan = 4πr²','Volume = ⁴⁄₃πr³']}
@@ -1912,7 +2595,9 @@ function transformPoint(x,y,type,p=0,q=0,k=1){
 const solidFields={
  cube:[['a','Panjang rusuk s',3]],
  cuboid:[['a','Panjang p',4],['b','Lebar l',3],['c','Tinggi t',2]],
- prism:[['a','Kaki segitiga a',3],['b','Kaki segitiga b',4],['L','Panjang prisma',8]],
+ prism:[['a','Sisi alas a',3],['b','Sisi alas b',4],['c','Sisi alas c',5],['L','Panjang prisma',8]],
+ squarePyramid:[['a','Sisi alas persegi',6],['h','Tinggi limas',4]],
+ triPyramid:[['a','Sisi alas segitiga sama sisi',6],['h','Tinggi limas',5]],
  cylinder:[['r','Jari-jari r',3],['h','Tinggi t',7]],
  cone:[['r','Jari-jari r',3],['h','Tinggi t',4]],
  sphere:[['r','Jari-jari r',3]]
@@ -1970,7 +2655,415 @@ $('#transformBtn').addEventListener('click',()=>{
  catch(e){out.innerHTML=`<div class="wizard-error">${escapeHtml(e.message)}</div>`}
 });
 
+
+// Curriculum extension helpers with strict input validation.
+function msRead(id,label){const raw=$('#'+id).value.trim();if(raw==='')throw Error(`${label} belum diisi. Masukkan angka terlebih dahulu.`);const n=Number(raw);if(!Number.isFinite(n))throw Error(`${label} harus berupa angka yang valid.`);return n}
+function msOut(id,markup){const el=$('#'+id);el.innerHTML=markup;if(markup&&!markup.includes('wizard-error'))el.innerHTML+=`<div class="result-actions"><button class="btn secondary" type="button" data-copy-target="${id}">Salin hasil</button></div>`}
+function msError(id,error){msOut(id,`<div class="wizard-error">${escapeHtml(error&&error.message?error.message:'Periksa kembali angka yang dimasukkan.')}</div>`)}
+function msQuadratic(a,b,c){if(![a,b,c].every(Number.isFinite))throw Error('Koefisien harus berupa angka valid.');if(a===0)throw Error('Koefisien a tidak boleh nol. Jika a = 0, soal menjadi persamaan linear.');const scale=Math.max(Math.abs(a),Math.abs(b),Math.abs(c),Number.MIN_VALUE),A=a/scale,B=b/scale,C=c/scale;let D=B*B-4*A*C;const tol=64*Number.EPSILON*(B*B+Math.abs(4*A*C));if(Math.abs(D)<=tol)D=0;const vx=-B/(2*A),vy=-D*scale/(4*A);let roots=[];if(D>0){const sd=Math.sqrt(D),q=-.5*(B+(B>=0?sd:-sd));roots=[q/A,q===0?(-B-sd)/(2*A):C/q].sort((x,y)=>x-y)}else if(D===0)roots=[-B/(2*A),-B/(2*A)];const actualD=D*scale*scale;if(!Number.isFinite(actualD)||!Number.isFinite(vx)||!Number.isFinite(vy)||roots.some(x=>!Number.isFinite(x)))throw Error('Hasil diskriminan atau titik puncak terlalu besar untuk ditampilkan. Coba koefisien yang lebih kecil.');return {D:actualD,roots,vertex:{x:vx,y:vy},kind:D>0?'two':D===0?'double':'complex',complex:D<0?Math.sqrt(-D)/(2*Math.abs(A)):0}}
+function msRatio(mode,x1,y1,x2,map,actual){if(mode==='direct'||mode==='inverse'){if(x1===0)throw Error('Nilai pertama tidak boleh nol.');if(mode==='inverse'&&x2===0)throw Error('Nilai pembanding tidak boleh nol.');const result=mode==='direct'?y1*x2/x1:y1*x1/x2;if(!Number.isFinite(result))throw Error('Hasil di luar rentang angka.');return {result,steps:mode==='direct'?'Kalikan nilai pasangan dengan nilai baru, lalu bagi dengan nilai awal.':'Kalikan kedua nilai awal, lalu bagi dengan nilai pembanding.'}}if(map<=0||actual<=0)throw Error('Jarak peta dan jarak sebenarnya harus lebih besar dari nol.');const result=actual/map;if(!Number.isFinite(result))throw Error('Skala terlalu besar.');return {result,steps:`Skala = jarak peta : jarak sebenarnya = 1 : ${pretty(result)}. Pastikan kedua jarak memakai satuan yang sama.`}}
+function msSocial(mode,v){if(Object.values(v).some(x=>!Number.isFinite(x)))throw Error('Periksa angka yang dimasukkan.');if(mode==='profit'){if(v.buy<=0)throw Error('Harga beli harus lebih besar dari nol.');const diff=v.sell-v.buy,amount=Math.abs(diff),percent=Math.abs(diff/v.buy*100);if(!Number.isFinite(amount)||!Number.isFinite(percent))throw Error('Selisih atau persentase terlalu besar untuk dihitung.');return {title:diff>=0?'Untung':'Rugi',amount,percent}}if(mode==='discount'){if(v.price<0||v.rate<0||v.rate>100)throw Error('Harga tidak boleh negatif dan diskon harus 0–100%.');const cut=v.price*v.rate/100,amount=v.price-cut;if(!Number.isFinite(cut)||!Number.isFinite(amount))throw Error('Hasil diskon terlalu besar untuk dihitung.');return {title:'Harga setelah diskon',amount,discount:cut}}if(mode==='net'){if(v.gross<0||v.tare<0||v.tare>v.gross)throw Error('Tara tidak boleh melebihi bruto.');return {title:'Berat bersih (neto)',amount:v.gross-v.tare}}if(mode==='interest'){if(v.principal<=0||v.rate<0||v.years<0)throw Error('Modal harus lebih dari nol; bunga dan waktu tidak boleh negatif.');const amount=v.principal*v.rate/100*v.years,total=v.principal+amount;if(!Number.isFinite(amount)||!Number.isFinite(total))throw Error('Hasil bunga terlalu besar untuk dihitung.');return {title:'Bunga tunggal',amount,total}}throw Error('Jenis hitungan tidak dikenal.')}
+function msAngleInfo(mode,deg){if(!Number.isFinite(deg)||deg<=0||deg>=180)throw Error('Sudut harus lebih dari 0° dan kurang dari 180°.');const adjacent=180-deg;return mode==='intersect'?[['Sudut diketahui',deg],['Sudut bertolak belakang',deg],['Sudut bersebelahan',adjacent]]:[['Sudut sehadap',deg],['Sudut dalam berseberangan',deg],['Sudut luar berseberangan',deg],['Sudut dalam sepihak',adjacent],['Sudut luar sepihak',adjacent]]}
+function msSequence(mode,a,d,n){if(!Number.isSafeInteger(n)||n<1||n>100000)throw Error('Nomor suku harus bilangan bulat 1 sampai 100.000.');const term=mode==='arithmetic'?a+(n-1)*d:a*Math.pow(d,n-1),sum=mode==='arithmetic'?n/2*(2*a+(n-1)*d):(d===1?a*n:a*(Math.pow(d,n)-1)/(d-1));if(!Number.isFinite(term)||!Number.isFinite(sum))throw Error('Hasil terlalu besar. Kurangi nomor suku atau pengalinya.');return {term,sum,first:Array.from({length:Math.min(n,6)},(_,i)=>mode==='arithmetic'?a+i*d:a*Math.pow(d,i))}}
+function msSqrtParts(n){if(!Number.isSafeInteger(n)||n<=0||n>1000000000)throw Error('Bilangan di dalam akar harus bilangan bulat positif sampai 1.000.000.000 agar bisa disederhanakan dengan aman.');let outside=1,inside=n;for(let k=2;k*k<=inside;k++)while(inside%(k*k)===0){inside/=k*k;outside*=k}return {outside,inside}}
+function msScientific(n){if(!Number.isFinite(n))throw Error('Angka tidak valid.');if(n===0)return {mantissa:0,exponent:0};const parts=n.toExponential().split('e');return {mantissa:Number(parts[0]),exponent:Number(parts[1])}}
+
+// Quadratic solver
+$('#quadSolve').addEventListener('click',()=>{try{const a=msRead('quadA','Koefisien a'),b=msRead('quadB','Koefisien b'),c=msRead('quadC','Koefisien c'),r=msQuadratic(a,b,c),roots=r.kind==='complex'?`x₁,₂ = ${pretty(-b/(2*a))} ± ${pretty(r.complex)}i`:`x₁ = ${pretty(r.roots[0])}, x₂ = ${pretty(r.roots[1])}`;msOut('quadOutput',`<div class="result-box"><b>${r.kind==='two'?'Dua akar real berbeda':r.kind==='double'?'Akar real kembar':'Akar tidak real'}</b><h3>Diskriminan D = ${pretty(r.D)}</h3><p>${escapeHtml(roots)}</p><p>Titik puncak: (${pretty(r.vertex.x)}, ${pretty(r.vertex.y)})</p><p>Sumbu simetri: x = ${pretty(r.vertex.x)}</p></div>`)}catch(e){msError('quadOutput',e)}});
+$$('[data-quad-example]').forEach(b=>b.addEventListener('click',()=>{const v={two:[1,-5,6],double:[1,-4,4],complex:[1,2,5]}[b.dataset.quadExample];['quadA','quadB','quadC'].forEach((id,i)=>$('#'+id).value=v[i]);$('#quadSolve').click()}));
+
+// Ratio tool
+function renderRatioFields(){const mode=$('#ratioMode').value,cfg=mode==='scale'?[['ratioMap','Jarak pada peta',5],['ratioActual','Jarak sebenarnya (satuan sama)',100000]]:[['ratioX1','Nilai pertama',2],['ratioY1','Pasangan nilai',10],['ratioX2','Nilai pembanding',4]];$('#ratioFields').innerHTML=cfg.map(([id,label,val])=>`<div class="field"><label for="${id}">${label}</label><input class="math-input" id="${id}" type="number" step="any" value="${val}"></div>`).join('')}
+$('#ratioMode').addEventListener('change',renderRatioFields);renderRatioFields();
+$('#ratioSolve').addEventListener('click',()=>{try{const mode=$('#ratioMode').value,r=mode==='scale'?msRatio(mode,0,0,0,msRead('ratioMap','Jarak peta'),msRead('ratioActual','Jarak sebenarnya')):msRatio(mode,msRead('ratioX1','Nilai pertama'),msRead('ratioY1','Pasangan nilai'),msRead('ratioX2','Nilai pembanding'));msOut('ratioOutput',`<div class="result-box"><b>Hasil</b><h3>${mode==='scale'?'Skala 1 : ':'Nilai yang dicari = '}${pretty(r.result)}</h3><p>${escapeHtml(r.steps)}</p></div>`)}catch(e){msError('ratioOutput',e)}});
+$$('[data-ratio-example]').forEach(b=>b.addEventListener('click',()=>{const m=b.dataset.ratioExample;$('#ratioMode').value=m;renderRatioFields();if(m==='scale'){$('#ratioMap').value=5;$('#ratioActual').value=100000}else{$('#ratioX1').value=m==='direct'?2:4;$('#ratioY1').value=m==='direct'?100:6;$('#ratioX2').value=m==='direct'?5:8}$('#ratioSolve').click()}));
+
+// Social arithmetic
+const socialFields={profit:[['buy','Harga beli',80000],['sell','Harga jual',100000]],discount:[['price','Harga awal',150000],['rate','Diskon (%)',20]],net:[['gross','Berat bruto',10],['tare','Berat tara',1.5]],interest:[['principal','Modal awal',1000000],['rate','Bunga per tahun (%)',5],['years','Waktu (tahun)',2]]};
+function renderSocialFields(){const m=$('#socialMode').value;$('#socialFields').innerHTML=socialFields[m].map(([id,label,val])=>`<div class="field"><label for="social_${id}">${label}</label><input class="math-input" id="social_${id}" type="number" step="any" value="${val}"></div>`).join('')}
+$('#socialMode').addEventListener('change',renderSocialFields);renderSocialFields();
+$('#socialSolve').addEventListener('click',()=>{try{const m=$('#socialMode').value,v=Object.fromEntries(socialFields[m].map(([id])=>[id,msRead('social_'+id,id)])),r=msSocial(m,v);let detail=m==='profit'?`<h3>${r.title}: ${pretty(r.amount)}</h3><p>Persentase ${r.title.toLowerCase()} = ${pretty(r.percent)}% dari harga beli.</p>`:m==='discount'?`<h3>Bayar: ${pretty(r.amount)}</h3><p>Potongan: ${pretty(r.discount)}</p>`:m==='net'?`<h3>Neto: ${pretty(r.amount)}</h3><p>Neto = bruto − tara.</p>`:`<h3>Bunga: ${pretty(r.amount)}</h3><p>Total uang: ${pretty(r.total)}</p><p>Bunga tunggal = modal × bunga per tahun × waktu.</p>`;msOut('socialOutput',`<div class="result-box"><b>${r.title}</b>${detail}</div>`)}catch(e){msError('socialOutput',e)}});
+$$('[data-social-example]').forEach(b=>b.addEventListener('click',()=>{$('#socialMode').value=b.dataset.socialExample;renderSocialFields();$('#socialSolve').click()}));
+
+// Angle relationships
+$('#angleSolve').addEventListener('click',()=>{try{const rows=msAngleInfo($('#angleMode').value,msRead('angleKnown','Sudut diketahui'));msOut('angleOutput',`<div class="result-box"><b>Sudut yang berkaitan</b><div class="angle-result-grid">${rows.map(([label,val])=>`<div><span>${escapeHtml(label)}</span><b>${pretty(val)}°</b></div>`).join('')}</div><p class="small muted">Sudut bertolak belakang sama besar. Sudut bersebelahan pada garis lurus berjumlah 180°. Pada garis sejajar, sehadap dan berseberangan sama besar, sedangkan sepihak berjumlah 180°.</p></div>`)}catch(e){msError('angleOutput',e)}});
+$$('[data-angle-example]').forEach(b=>b.addEventListener('click',()=>{$('#angleKnown').value=b.dataset.angleExample;$('#angleSolve').click()}));
+
+// Arithmetic and geometric sequences
+$('#seqSolve').addEventListener('click',()=>{try{const m=$('#seqMode').value,r=msSequence(m,msRead('seqFirst','Angka pertama'),msRead('seqStep','Selisih/pengali'),msRead('seqN','Nomor suku'));msOut('seqOutput',`<div class="result-box"><b>Urutan awal</b><p>${r.first.map(pretty).join(', ')}${r.first.length===6?', …':''}</p><h3>Suku yang dicari = ${pretty(r.term)}</h3><p>Jumlah suku pertama = ${pretty(r.sum)}</p><p class="small muted">${m==='arithmetic'?'Setiap suku berubah dengan selisih tetap.':'Setiap suku dikali dengan bilangan yang sama.'}</p></div>`)}catch(e){msError('seqOutput',e)}});
+$$('[data-seq-example]').forEach(b=>b.addEventListener('click',()=>{const m=b.dataset.seqExample;$('#seqMode').value=m;$('#seqFirst').value=m==='arithmetic'?3:2;$('#seqStep').value=m==='arithmetic'?2:3;$('#seqN').value=6;$('#seqSolve').click()}));
+
+// Exponent laws, rationalising and scientific notation
+function renderExponentToolFields(){const m=$('#expMode').value,host=$('#expExtraFields');if(m==='laws')host.innerHTML='<div class="two-col"><div class="field"><label>Basis a</label><input class="math-input" id="lawBase" type="number" step="any" value="2"></div><div class="field"><label>Pangkat m</label><input class="math-input" id="lawM" type="number" step="1" value="3"></div><div class="field"><label>Pangkat n</label><input class="math-input" id="lawN" type="number" step="1" value="4"></div></div><div class="field"><label>Operasi</label><select class="math-input" id="lawOp"><option value="mul">Perkalian aᵐ × aⁿ</option><option value="div">Pembagian aᵐ ÷ aⁿ</option></select></div>';else if(m==='rational')host.innerHTML='<div class="two-col"><div class="field"><label>Angka di atas pecahan</label><input class="math-input" id="ratNum" type="number" step="any" value="3"></div><div class="field"><label>Bilangan di dalam akar</label><input class="math-input" id="ratRoot" type="number" min="1" step="1" value="5"></div></div>';else host.innerHTML='<div class="field"><label>Angka yang mau diubah</label><input class="math-input" id="sciNumber" type="number" step="any" value="4500000"></div>'}
+$('#expMode').addEventListener('change',renderExponentToolFields);renderExponentToolFields();
+$('#expToolSolve').addEventListener('click',()=>{try{const m=$('#expMode').value;if(m==='laws'){const a=msRead('lawBase','Basis'),x=msRead('lawM','Pangkat m'),y=msRead('lawN','Pangkat n'),op=$('#lawOp').value;if(!Number.isInteger(x)||!Number.isInteger(y)||Math.abs(x)>10000||Math.abs(y)>10000)throw Error('Pangkat m dan n harus bilangan bulat dalam rentang ±10.000.');const exponent=op==='mul'?x+y:x-y;if(op==='div'&&a===0&&exponent<0)throw Error('Nol tidak boleh memiliki pangkat negatif.');const result=Math.pow(a,exponent);if(!Number.isFinite(result))throw Error('Hasil terlalu besar.');msOut('expToolOutput',`<div class="result-box"><h3>${pretty(a)}^${x} ${op==='mul'?'×':'÷'} ${pretty(a)}^${y} = ${pretty(a)}^${exponent}</h3><p>Hasil angka = ${pretty(result)}</p></div>`)}else if(m==='rational'){const a=msRead('ratNum','Pembilang'),n=msRead('ratRoot','Bilangan di dalam akar');if(!Number.isSafeInteger(n)||n<=0)throw Error('Bilangan di dalam akar harus bilangan bulat positif.');const f=msSqrtParts(n);if(f.inside===1)msOut('expToolOutput',`<div class="result-box"><h3>${pretty(a)} / √${n} = ${pretty(a/Math.sqrt(n))}</h3><p>Akar penyebut dapat dihitung langsung karena radikannya merupakan kuadrat sempurna.</p></div>`);else msOut('expToolOutput',`<div class="result-box"><h3>${pretty(a)} / √${n} = ${pretty(a*f.outside)}√${f.inside} / ${n}</h3><p>Kalikan pembilang dan penyebut dengan √${f.inside}. Nilai pendekatan = ${pretty(a/Math.sqrt(n))}.</p></div>`)}else{const n=msRead('sciNumber','Angka');const r=msScientific(n);msOut('expToolOutput',`<div class="result-box"><h3>${pretty(r.mantissa)} × 10^${r.exponent}</h3><p>Angka depan bentuk baku memiliki nilai mutlak dari 1 sampai kurang dari 10.</p></div>`)}}catch(e){msError('expToolOutput',e)}});
+$$('[data-exp-example]').forEach(b=>b.addEventListener('click',()=>{const m=b.dataset.expExample;$('#expMode').value=m;renderExponentToolFields();if(m==='laws'){$('#lawBase').value=2;$('#lawM').value=3;$('#lawN').value=4}else if(m==='rational'){$('#ratNum').value=3;$('#ratRoot').value=5}else $('#sciNumber').value=4500000;$('#expToolSolve').click()}));
+
+// Copy result text using Clipboard API with a textarea fallback for file viewers.
+document.addEventListener('click',async e=>{const btn=e.target.closest('[data-copy-target]');if(!btn)return;const target=document.getElementById(btn.dataset.copyTarget);if(!target)return;const text=target.innerText||target.textContent||'';if(!text.trim())return;try{if(navigator.clipboard&&navigator.clipboard.writeText)await navigator.clipboard.writeText(text);else{const ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove()}btn.textContent='Tersalin ✓'}catch(_){btn.textContent='Salin tidak tersedia'}});
+
+// Friendly empty-input response and parentheses validator for the main calculator.
+const msOriginalCalculate=calculate;
+calculate=function(){if(!$('#calcInput').value.trim()){$('#expressionPreview').textContent='Tulis hitungan dulu, misalnya 2 × (3 + 4).';$('#calcResult').textContent='—';return}msOriginalCalculate()};
+
+
+$$('[data-reset-tool]').forEach(btn=>btn.addEventListener('click',()=>{
+ const type=btn.dataset.resetTool;
+ if(type==='quad'){['1','-5','6'].forEach((v,i)=>$('#'+['quadA','quadB','quadC'][i]).value=v);$('#quadOutput').innerHTML=''}
+ else if(type==='ratio'){$('#ratioMode').value='direct';renderRatioFields();$('#ratioOutput').innerHTML=''}
+ else if(type==='social'){$('#socialMode').value='profit';renderSocialFields();$('#socialOutput').innerHTML=''}
+ else if(type==='angle'){$('#angleMode').value='intersect';$('#angleKnown').value='65';$('#angleOutput').innerHTML=''}
+ else if(type==='sequence'){$('#seqMode').value='arithmetic';$('#seqFirst').value='3';$('#seqStep').value='2';$('#seqN').value='6';$('#seqOutput').innerHTML=''}
+ else if(type==='exponents'){$('#expMode').value='laws';renderExponentToolFields();$('#expToolOutput').innerHTML=''}
+}));
+
+
+$$('.curriculum-links a').forEach(link=>link.addEventListener('click',e=>{
+ e.preventDefault();
+ const target=document.querySelector(link.getAttribute('href'));
+ const disclosure=$('#curriculumMore');
+ if(disclosure)disclosure.open=true;
+ if(target){try{target.scrollIntoView({behavior:'smooth',block:'start'})}catch(_){target.scrollIntoView()}}
+}));
+
+
+// POWER ENGINE 1.0 — exact integer powers and rational arithmetic.
+// Bounds keep calculations responsive on mobile devices.
+const POWER_MAX_EXP=1000;
+const POWER_MAX_DIGITS=6000;
+function powerGcd(a,b){
+ a=a<0n?-a:a;b=b<0n?-b:b;
+ while(b!==0n){const t=a%b;a=b;b=t}
+ return a||1n;
+}
+function powerRational(n,d=1n){
+ if(d===0n)throw Error('Penyebut tidak boleh nol. Pembagian dengan nol tidak terdefinisi.');
+ if(d<0n){n=-n;d=-d}
+ if(n===0n)return {n:0n,d:1n};
+ const g=powerGcd(n,d);
+ return {n:n/g,d:d/g};
+}
+function powerCheckSize(x){
+ const digits=(x<0n?-x:x).toString().length;
+ if(digits>POWER_MAX_DIGITS)throw Error(`Hasil terlalu besar untuk ditampilkan dengan aman (lebih dari ${POWER_MAX_DIGITS.toLocaleString('id-ID')} digit). Kurangi nilai basis atau pangkat.`);
+ return x;
+}
+function powerParseInteger(id,label){
+ const raw=$('#'+id).value.trim();
+ if(raw==='')throw Error(`${label} belum diisi. Masukkan bilangan bulat.`);
+ if(!/^[+-]?\d+$/.test(raw))throw Error(`${label} harus bilangan bulat tanpa koma atau titik.`);
+ if(raw.replace(/^[+-]/,'').length>30)throw Error(`${label} terlalu panjang. Maksimal 30 digit.`);
+ return BigInt(raw);
+}
+function powerParseExponent(id,label){
+ const e=powerParseInteger(id,label);
+ if(e>BigInt(POWER_MAX_EXP)||e<BigInt(-POWER_MAX_EXP))throw Error(`${label} harus berada antara −${POWER_MAX_EXP} sampai ${POWER_MAX_EXP}. Batas ini melindungi performa HP.`);
+ return Number(e);
+}
+function powerPowInt(base,exponent){
+ if(!Number.isInteger(exponent)||Math.abs(exponent)>POWER_MAX_EXP)throw Error('Pangkat harus bilangan bulat dalam batas aman.');
+ if(base===0n&&exponent===0)throw Error('0⁰ tidak terdefinisi. Isi basis atau pangkat yang sesuai.');
+ if(base===0n&&exponent<0)throw Error('Nol tidak bisa memiliki pangkat negatif karena akan menyebabkan pembagian dengan nol.');
+ if(exponent===0)return {n:1n,d:1n};
+ let e=Math.abs(exponent),factor=base,result=1n;
+ while(e>0){
+  if(e%2===1){result*=factor;powerCheckSize(result)}
+  e=Math.floor(e/2);
+  if(e>0){factor*=factor;powerCheckSize(factor)}
+ }
+ if(exponent<0)return powerRational(1n,result);
+ return powerRational(result,1n);
+}
+function powerMultiply(x,y){
+ // Cross-cancel first so large intermediate products do not overflow needlessly.
+ const g1=powerGcd(x.n,y.d),g2=powerGcd(y.n,x.d);
+ const n=(x.n/g1)*(y.n/g2),d=(x.d/g2)*(y.d/g1);
+ return powerRational(powerCheckSize(n),powerCheckSize(d));
+}
+function powerDivide(x,y){
+ if(y.n===0n)throw Error('Tidak bisa membagi dengan hasil nol. Periksa basis dan pangkat pada penyebut.');
+ return powerMultiply(x,powerRational(y.d,y.n));
+}
+function powerRationalPow(x,k){
+ const top=powerPowInt(x.n,k),bottom=powerPowInt(x.d,k);
+ return powerDivide(top,bottom);
+}
+function powerReductionDetail(x,y,operation){
+ let n=operation==='divide'?x.n*y.d:x.n*y.n;
+ let d=operation==='divide'?x.d*y.n:x.d*y.d;
+ if(d===0n)throw Error('Penyebut hasil tidak boleh nol.');
+ if(d<0n){n=-n;d=-d}
+ if(n.toString().length>POWER_MAX_DIGITS||d.toString().length>POWER_MAX_DIGITS)
+  return 'FPB dan penyederhanaan dilakukan otomatis sebelum hasil akhir agar angka sementara tetap aman.';
+ const g=powerGcd(n,d),reduced=powerRational(n,d);
+ if(g===1n)return `Bentuk ${n.toString()}/${d.toString()} sudah sederhana karena FPB = 1.`;
+ return `Bentuk awal ${n.toString()}/${d.toString()}. FPB(${n.toString()}, ${d.toString()}) = ${g.toString()}, jadi hasilnya ${powerFormatRat(reduced)}.`;
+}
+function powerFormatRat(x){
+ if(x.d===1n)return x.n.toString();
+ return `${x.n.toString()}/${x.d.toString()}`;
+}
+function powerDecimalPreview(x){
+ const a=Number(x.n),b=Number(x.d),v=a/b;
+ if(Number.isFinite(v)&&Math.abs(v)<1e15&&Math.abs(v)>1e-15)return Number(v.toPrecision(12)).toString();
+ if(x.n===0n)return '0';
+ if(x.d===1n){
+  const sign=x.n<0n?'-':'',digits=(x.n<0n?-x.n:x.n).toString();
+  if(digits.length>12)return `${sign}${digits[0]}.${digits.slice(1,7)} × 10^${digits.length-1}`;
+ }
+ return null;
+}
+function powerSup(n){
+ const map={'-':'⁻','0':'⁰','1':'¹','2':'²','3':'³','4':'⁴','5':'⁵','6':'⁶','7':'⁷','8':'⁸','9':'⁹'};
+ return String(n).split('').map(c=>map[c]||c).join('');
+}
+function powerTerm(base,exp){
+ const b=base.toString();
+ return `${b.includes('-')?'('+b+')':b}${powerSup(exp)}`;
+}
+function powerRun(spec){
+ const steps=[];
+ const rule=(title,formula,reason='')=>steps.push({title,formula,reason});
+ let result,expression,law;
+ const readBase=(id,label)=>powerParseInteger(id,label);
+ const readExp=(id,label)=>powerParseExponent(id,label);
+ if(spec.mode==='single'){
+  const a=readBase('pwA','Basis a'),m=readExp('pwM','Pangkat m');
+  expression=powerTerm(a,m);
+  rule('Baca basis dan pangkat',`${a.toString()}^${m}`,'Basis adalah angka yang dipangkatkan. Pangkat negatif berarti kebalikan; pangkat nol bernilai satu jika basis bukan nol.');
+  result=powerPowInt(a,m);
+ }else if(spec.mode==='same-mul'||spec.mode==='same-div'){
+  const a=readBase('pwA','Basis a'),m=readExp('pwM','Pangkat m'),n=readExp('pwN','Pangkat n');
+  const op=spec.mode==='same-mul'?'×':'÷';
+  expression=`${powerTerm(a,m)} ${op} ${powerTerm(a,n)}`;
+  if(spec.mode==='same-mul'){
+   const combined=m+n;
+   if(Math.abs(combined)>POWER_MAX_EXP)throw Error('Jumlah pangkat melewati batas aman ±1000.');
+   rule('Kenali aturannya','aᵐ × aⁿ = aᵐ⁺ⁿ','Jika basis sama dikalikan, pangkat dijumlahkan. Untuk basis nol, setiap pangkat tetap diperiksa satu per satu.');
+   rule('Gabungkan pangkat',`${a.toString()}^(${m}) × ${a.toString()}^(${n}) = ${a.toString()}^(${m}+${n}) = ${a.toString()}^(${combined})`);
+   if(a===0n){
+    const left=powerPowInt(a,m),right=powerPowInt(a,n);
+    result=powerMultiply(left,right);
+   }else result=powerPowInt(a,combined);
+  }else{
+   rule('Kenali aturannya','aᵐ ÷ aⁿ = aᵐ⁻ⁿ','Jika basis sama dibagi, pangkat dikurangkan. Basis harus bukan nol.');
+   const top=powerPowInt(a,m),bottom=powerPowInt(a,n);
+   result=powerDivide(top,bottom);
+   rule('Kurangkan pangkat',`${a.toString()}^(${m}) ÷ ${a.toString()}^(${n}) = ${a.toString()}^(${m-n})`);
+  }
+ }else if(spec.mode==='different-mul'||spec.mode==='different-div'){
+  const a=readBase('pwA','Basis a'),m=readExp('pwM','Pangkat m'),b=readBase('pwB','Basis b'),n=readExp('pwN','Pangkat n');
+  expression=`${powerTerm(a,m)} ${spec.mode==='different-mul'?'×':'÷'} ${powerTerm(b,n)}`;
+  rule('Hitung setiap pangkat','Basis berbeda: hitung aᵐ dan bⁿ secara terpisah.','Aturan penjumlahan pangkat hanya berlaku jika basisnya sama.');
+  const left=powerPowInt(a,m),right=powerPowInt(b,n);
+  rule('Nilai pangkat pertama',`${powerTerm(a,m)} = ${powerFormatRat(left)}`);
+  rule('Nilai pangkat kedua',`${powerTerm(b,n)} = ${powerFormatRat(right)}`);
+  result=spec.mode==='different-mul'?powerMultiply(left,right):powerDivide(left,right);
+  rule('Periksa FPB hasil pecahan',powerReductionDetail(left,right,spec.mode==='different-mul'?'multiply':'divide'));
+ }else if(spec.mode==='fraction-power'){
+  const a=readBase('pwA','Pembilang a'),b=readBase('pwB','Penyebut b'),n=readExp('pwN','Pangkat n');
+  if(b===0n)throw Error('Penyebut b tidak boleh nol.');
+  expression=`(${a.toString()}/${b.toString()})${powerSup(n)}`;
+  rule('Gunakan aturan pangkat pecahan','(a/b)ⁿ = aⁿ/bⁿ','Pangkat diterapkan pada pembilang dan penyebut.');
+  const top=powerPowInt(a,n),bottom=powerPowInt(b,n);
+  rule('Pangkatkan pembilang',`${a.toString()}^${n} = ${powerFormatRat(top)}`);
+  rule('Pangkatkan penyebut',`${b.toString()}^${n} = ${powerFormatRat(bottom)}`);
+  result=powerDivide(top,bottom);
+  rule('Sederhanakan pecahan',powerReductionDetail(top,bottom,'divide'));
+ }else if(spec.mode==='fraction-quotient'||spec.mode==='fraction-outer'){
+  const a=readBase('pwA','Basis pembilang a'),m=readExp('pwM','Pangkat pembilang m');
+  const b=readBase('pwB','Basis penyebut b'),n=readExp('pwN','Pangkat penyebut n');
+  const k=spec.mode==='fraction-outer'?readExp('pwK','Pangkat luar k'):1;
+  if(spec.mode==='fraction-outer'&&Math.abs(k*m)>POWER_MAX_EXP||spec.mode==='fraction-outer'&&Math.abs(k*n)>POWER_MAX_EXP)throw Error('Hasil perkalian pangkat melewati batas aman ±1000.');
+  expression=`(${powerTerm(a,m)}/${powerTerm(b,n)})${spec.mode==='fraction-outer'?powerSup(k):''}`;
+  rule('Pahami bentuknya',spec.mode==='fraction-outer'?'(aᵐ/bⁿ)ᵏ = aᵐᵏ/bⁿᵏ':'aᵐ/bⁿ','Pangkat pembilang dan penyebut dihitung masing-masing.');
+  const top=powerPowInt(a,m),bottom=powerPowInt(b,n);
+  let inner=powerDivide(top,bottom);
+  rule('Hitung pembilang dan penyebut',`${powerTerm(a,m)} ÷ ${powerTerm(b,n)} = ${powerFormatRat(inner)}`);
+  rule('Sederhanakan pecahan',powerReductionDetail(top,bottom,'divide'));
+  if(spec.mode==='fraction-outer'){
+   rule('Kalikan pangkat dengan pangkat luar',`m × k = ${m*k} dan n × k = ${n*k}.`);
+   const beforeOuter=inner;
+   inner=powerRationalPow(inner,k);
+   rule('Terapkan pangkat luar',`(${powerFormatRat(beforeOuter)})^${k} = ${powerFormatRat(inner)}`);
+  }
+  result=inner;
+ }else if(spec.mode==='power-power'){
+  const a=readBase('pwA','Basis a'),m=readExp('pwM','Pangkat dalam m'),n=readExp('pwN','Pangkat luar n');
+  if(Math.abs(m*n)>POWER_MAX_EXP)throw Error('Hasil perkalian pangkat melewati batas aman ±1000.');
+  expression=`(${powerTerm(a,m)})${powerSup(n)}`;
+  rule('Gunakan aturan pangkat dari pangkat','(aᵐ)ⁿ = aᵐ×ⁿ','Pangkat di dalam kurung dikalikan pangkat di luar.');
+  const e=m*n;rule('Kalikan kedua pangkat',`(${a.toString()}^${m})^${n} = ${a.toString()}^(${m} × ${n}) = ${a.toString()}^${e}`);
+  result=powerPowInt(a,e);
+ }else if(spec.mode==='product-power'){
+  const a=readBase('pwA','Basis a'),b=readBase('pwB','Basis b'),n=readExp('pwN','Pangkat n');
+  const product=a*b;powerCheckSize(product);
+  expression=`(${a.toString()} × ${b.toString()})${powerSup(n)}`;
+  rule('Gunakan aturan pangkat perkalian','(a × b)ⁿ = aⁿ × bⁿ','Pangkat berlaku untuk setiap faktor.');
+  rule('Kalikan basis atau pangkatkan satu per satu',`(${a.toString()} × ${b.toString()})^${n} = ${product.toString()}^${n}`);
+  result=powerPowInt(product,n);
+ }else if(spec.mode==='mixed-fractions'){
+  const a=readBase('pwA','Pembilang pecahan pertama a'),b=readBase('pwB','Penyebut pecahan pertama b');
+  const m=readExp('pwM','Pangkat pecahan pertama m');
+  const c=readBase('pwC','Pembilang pecahan kedua c'),d=readBase('pwD','Penyebut pecahan kedua d');
+  const n=readExp('pwN','Pangkat pecahan kedua n'),op=$('#pwOp').value;
+  if(b===0n||d===0n)throw Error('Penyebut kedua pecahan tidak boleh nol.');
+  expression=`(${a.toString()}/${b.toString()})${powerSup(m)} ${op} (${c.toString()}/${d.toString()})${powerSup(n)}`;
+  const left=powerDivide(powerPowInt(a,m),powerPowInt(b,m));
+  const right=powerDivide(powerPowInt(c,n),powerPowInt(d,n));
+  rule('Hitung pecahan pertama',`(${a.toString()}/${b.toString()})^${m} = ${powerFormatRat(left)}`);
+  rule('Hitung pecahan kedua',`(${c.toString()}/${d.toString()})^${n} = ${powerFormatRat(right)}`);
+  result=op==='×'?powerMultiply(left,right):powerDivide(left,right);
+  rule('Gabungkan dan sederhanakan',powerReductionDetail(left,right,op==='×'?'multiply':'divide'));
+ }else{
+  throw Error('Jenis operasi belum dikenali. Pilih bentuk hitungan dari daftar.');
+ }
+ rule('Sederhanakan hasil',`Hasil eksak = ${powerFormatRat(result)}`,'Pembilang dan penyebut dibagi dengan FPB jika masih bisa disederhanakan.');
+ return {expression,result,steps};
+}
+function powerRender(){
+ const mode=$('#powerMode').value,fields=[];
+ const field=(id,label,value,help='Bilangan bulat')=>fields.push(`<div class="field"><label for="${id}">${label}</label><input class="math-input" id="${id}" type="text" inputmode="numeric" autocomplete="off" value="${value}" placeholder="${help}"><small class="muted">${help}</small></div>`);
+ if(mode==='single'){field('pwA','Basis a','2');field('pwM','Pangkat m','-2')}
+ else if(['same-mul','same-div','power-power'].includes(mode)){
+  field('pwA','Basis a','2');field('pwM','Pangkat m','3');field('pwN',mode==='power-power'?'Pangkat luar n':'Pangkat n','2');
+ }else if(['different-mul','different-div'].includes(mode)){
+  field('pwA','Basis a','2');field('pwM','Pangkat m','3');field('pwB','Basis b','5');field('pwN','Pangkat n','2');
+ }else if(mode==='fraction-power'){
+  field('pwA','Pembilang a','2');field('pwB','Penyebut b','5');field('pwN','Pangkat n','3');
+ }else if(['fraction-quotient','fraction-outer'].includes(mode)){
+  field('pwA','Basis pembilang a','2');field('pwM','Pangkat pembilang m','3');field('pwB','Basis penyebut b','5');field('pwN','Pangkat penyebut n','3');
+  if(mode==='fraction-outer')field('pwK','Pangkat luar k','2');
+ }else if(mode==='product-power'){
+  field('pwA','Basis a','2');field('pwB','Basis b','3');field('pwN','Pangkat n','2');
+ }else if(mode==='mixed-fractions'){
+  field('pwA','Pembilang pecahan pertama a','2');field('pwB','Penyebut pecahan pertama b','3');field('pwM','Pangkat pecahan pertama m','2');
+  field('pwC','Pembilang pecahan kedua c','3');field('pwD','Penyebut pecahan kedua d','4');field('pwN','Pangkat pecahan kedua n','2');
+  fields.push(`<div class="field"><label for="pwOp">Operasi di antara pecahan</label><select class="math-input" id="pwOp"><option value="×">Perkalian (×)</option><option value="÷">Pembagian (÷)</option></select></div>`);
+ }
+ $('#powerFields').innerHTML=fields.join('');
+ $('#powerError').hidden=true;$('#powerOutput').innerHTML='';
+}
+$('#powerMode').addEventListener('change',powerRender);
+powerRender();
+$('#powerCalculate').addEventListener('click',()=>{
+ $('#powerError').hidden=true;$('#powerError').textContent='';$('#powerOutput').innerHTML='';
+ try{
+  const r=powerRun({mode:$('#powerMode').value});
+  const exact=powerFormatRat(r.result),decimal=powerDecimalPreview(r.result);
+  const steps=r.steps.map((s,i)=>`<div class="power-step"><div class="kicker">LANGKAH ${i+1} · ${escapeHtml(s.title)}</div><div class="formula">${escapeHtml(s.formula)}</div>${s.reason?`<p>${escapeHtml(s.reason)}</p>`:''}</div>`).join('');
+  $('#powerOutput').innerHTML=`<div class="power-steps"><div class="power-step"><div class="kicker">BENTUK SOAL</div><div class="formula">${escapeHtml(r.expression)}</div></div>${steps}</div><div class="power-final"><div class="small">HASIL AKHIR · BENTUK EKSAK</div><div class="answer">${escapeHtml(exact)}</div>${decimal!==null?`<p class="power-note">Nilai desimal pendekatan: ≈ ${escapeHtml(decimal)}. Bentuk pecahan di atas tetap menjadi hasil eksak.</p>`:'<p class="power-note">Nilai terlalu besar untuk ditampilkan sebagai desimal standar. Bentuk eksak tetap ditampilkan.</p>'}<div class="result-actions"><button class="btn secondary" type="button" data-copy-target="powerOutput">Salin hasil</button></div></div>`;
+ }catch(e){$('#powerError').textContent=e.message||'Periksa kembali inputnya.';$('#powerError').hidden=false}
+});
+function powerSetExample(kind){
+ const config={
+  'same-div':{mode:'same-div',values:{pwA:'5',pwM:'7',pwN:'3'}},
+  'negative':{mode:'single',values:{pwA:'2',pwM:'-2'}},
+  'zero':{mode:'single',values:{pwA:'7',pwM:'0'}},
+  'fraction':{mode:'fraction-power',values:{pwA:'2',pwB:'5',pwN:'3'}},
+  'outer':{mode:'fraction-outer',values:{pwA:'2',pwM:'3',pwB:'5',pwN:'3',pwK:'2'}}
+ }[kind];
+ if(!config)return;
+ $('#powerMode').value=config.mode;powerRender();
+ Object.entries(config.values).forEach(([id,value])=>{const el=$('#'+id);if(el)el.value=value});
+ $('#powerCalculate').click();
+}
+$$('[data-power-example]').forEach(b=>b.addEventListener('click',()=>powerSetExample(b.dataset.powerExample)));
+$('#powerReset').addEventListener('click',()=>powerRender());
+
+
+const powerRegressionCases=[
+ ['Power engine zero exponent is one',()=>powerFormatRat(powerPowInt(7n,0)),'1'],
+ ['Power engine direct single exponent',()=>powerFormatRat(powerPowInt(2n,-2)),'1/4'],
+ ['Power engine negative exponent becomes reciprocal',()=>{const r=powerPowInt(2n,-2);return powerFormatRat(r)},'1/4'],
+ ['Power engine negative base odd exponent',()=>powerFormatRat(powerPowInt(-2n,3)),'-8'],
+ ['Power engine negative base even exponent',()=>powerFormatRat(powerPowInt(-2n,4)),'16'],
+ ['Power engine rejects zero to zero',()=>{try{powerPowInt(0n,0);return false}catch(e){return true}},'true'],
+ ['Power engine rejects zero to negative exponent',()=>{try{powerPowInt(0n,-2);return false}catch(e){return true}},'true'],
+ ['Power engine reduces fraction',()=>powerFormatRat(powerRational(8n,125n)),'8/125'],
+ ['Power engine normalizes negative denominator',()=>powerFormatRat(powerRational(2n,-4n)),'-1/2'],
+ ['Power engine explains fraction simplification',()=>powerReductionDetail(powerRational(2n,3n),powerRational(3n,4n),'multiply'),'Bentuk awal 6/12. FPB(6, 12) = 6, jadi hasilnya 1/2.'],
+ ['Power engine same-base quotient',()=>{const a=powerPowInt(5n,7),b=powerPowInt(5n,3);return powerFormatRat(powerDivide(a,b))},'625'],
+ ['Power engine different-base multiplication',()=>powerFormatRat(powerMultiply(powerPowInt(2n,3),powerPowInt(5n,2))),'200'],
+ ['Power engine different-base division',()=>powerFormatRat(powerDivide(powerPowInt(2n,3),powerPowInt(5n,2))),'8/25'],
+ ['Power engine fraction power',()=>powerFormatRat(powerDivide(powerPowInt(2n,3),powerPowInt(5n,3))),'8/125'],
+ ['Power engine power of power',()=>powerFormatRat(powerPowInt(2n,3*2)),'64'],
+ ['Power engine outside exponent raises numerator and denominator',()=>powerFormatRat(powerRationalPow(powerRational(8n,125n),2)),'64/15625'],
+ ['Power engine cross-cancellation keeps reduced large ratio',()=>powerFormatRat(powerDivide(powerPowInt(2n,500),powerPowInt(2n,499))),'2'],
+ ['Power engine fraction outer power',()=>powerFormatRat(powerPowInt(8n,2))+'/'+powerFormatRat(powerPowInt(125n,2)),'64/15625'],
+ ['Power engine product power',()=>powerFormatRat(powerPowInt(2n*3n,2)),'36'],
+ ['Power engine divide by zero rejects',()=>{try{powerDivide(powerPowInt(3n,2),powerPowInt(0n,1));return false}catch(e){return true}},'true'],
+ ['Power engine rejects excessive exponent',()=>{try{powerPowInt(2n,1001);return false}catch(e){return true}},'true'],
+ ['Power engine output digit guard',()=>{try{powerPowInt(999999999999999n,1000);return false}catch(e){return true}},'true'],
+ ['Power engine zero base positive exponent',()=>powerFormatRat(powerPowInt(0n,4)),'0'],
+ ['Power engine zero base times positive powers',()=>powerFormatRat(powerMultiply(powerPowInt(0n,2),powerPowInt(0n,3))),'0'],
+ ['Power engine zero base with invalid negative exponent is rejected',()=>{try{powerPowInt(0n,2);powerPowInt(0n,-1);return false}catch(e){return true}},'true'],
+ ['Power engine one to large exponent remains one',()=>powerFormatRat(powerPowInt(1n,1000)),'1'],
+ ['Power engine negative one odd exponent',()=>powerFormatRat(powerPowInt(-1n,999)),'-1'],
+ ['Power engine negative one even exponent',()=>powerFormatRat(powerPowInt(-1n,1000)),'1'],
+ ['Power engine exact integer beyond Number safe range',()=>powerFormatRat(powerPowInt(2n,53)),'9007199254740992'],
+ ['Power engine rational negative outer exponent',()=>powerFormatRat(powerRationalPow(powerRational(8n,125n),-2)),'15625/64'],
+ ['Power engine negative fraction exponent',()=>powerFormatRat(powerDivide(powerPowInt(2n,-2),powerPowInt(5n,-2))),'25/4']
+];
+
+
+const fractionRegressionCases=[
+ ['Fraction mixed number converts correctly',()=>rationalText(fractionFromParts(1n,1n,2n,1n)),'3/2'],
+ ['Fraction mixed negative sign applies to whole value',()=>rationalText(fractionFromParts(1n,1n,2n,-1n)),'−3/2'],
+ ['Fraction sign position equivalence',()=>rationalText(fractionFromParts(0n,2n,5n,-1n)),'−2/5'],
+ ['Fraction zero denominator is rejected',()=>{try{fractionFromParts(0n,1n,0n);return false}catch(e){return true}},'true'],
+
+ ['Fraction negative sign in front equals negative numerator',()=>rationalText(rational(-2n,5n)),'−2/5'],
+ ['Fraction negative denominator is normalized',()=>rationalText(rational(2n,-5n)),'−2/5'],
+ ['Fraction zero reduces to 0/1',()=>rationalText(rational(0n,9n)),'0'],
+ ['Fraction power negative exponent flips the fraction',()=>rationalText(fractionPow(rational(2n,5n),-2)),'25/4'],
+ ['Fraction power even exponent makes negative base positive',()=>rationalText(fractionPow(rational(-2n,5n),2)),'4/25'],
+ ['Fraction power odd exponent keeps negative base',()=>rationalText(fractionPow(rational(-2n,5n),3)),'−8/125'],
+ ['Fraction power zero exponent gives one',()=>rationalText(fractionPow(rational(7n,9n),0)),'1'],
+ ['Fraction rejects zero to zero',()=>{try{fractionPow(rational(0n,1n),0);return false}catch(e){return true}},'true'],
+ ['Fraction rejects zero to negative power',()=>{try{fractionPow(rational(0n,1n),-2);return false}catch(e){return true}},'true'],
+ ['Fraction exact square root 4/9',()=>{const r=fractionRationalExponent(rational(4n,9n),1,2);return rationalText(r.exact)},'2/3'],
+ ['Fraction exact cube root negative 8/27',()=>{const r=fractionRationalExponent(rational(-8n,27n),1,3);return rationalText(r.exact)},'−2/3'],
+ ['Fraction rejects even root of negative number',()=>{try{fractionRationalExponent(rational(-4n,9n),1,2);return false}catch(e){return true}},'true'],
+ ['Fraction rational exponent negative power',()=>{const r=fractionRationalExponent(rational(4n,9n),-1,2);return rationalText(r.exact)},'3/2'],
+ ['Fraction addition with unlike denominators',()=>rationalText(rationalOp(rational(1n,2n),rational(3n,4n),'add')),'5/4'],
+ ['Fraction division by zero rejected',()=>{try{rationalOp(rational(1n,2n),rational(0n,1n),'div');return false}catch(e){return true}},'true']
+];
+
 const regressionCases=[
+ ...fractionRegressionCases,
+ ...powerRegressionCases,
+ ['Power single-term negative exponent',()=>powerFormatRat(powerPowInt(2n,-2)),'1/4'],
+ ['Power single-term zero exponent',()=>powerFormatRat(powerPowInt(7n,0)),'1'],
+ ['Implicit multiplication in calculator: 2(3+4)',()=>parseExpression('2(3+4)'),14],
+ ['Implicit multiplication chained groups',()=>parseExpression('(2+1)(3+2)'),15],
+ ['Implicit multiplication with pi',()=>Math.abs(parseExpression('2pi')-2*Math.PI)<1e-12,'true'],
+ ['Implicit multiplication before function',()=>parseExpression('2sin(30)'),1],
+ ['Exponent precedence: -2^2',()=>parseExpression('-2^2'),-4],
+ ['Parentheses override unary precedence',()=>parseExpression('(-2)^2'),4],
+ ['Power is right associative',()=>parseExpression('2^3^2'),512],
+ ['Division by zero is rejected',()=>{try{parseExpression('5/0');return false}catch(e){return true}},'true'],
+ ['Scientific notation stays normalized near decimal boundary',()=>{const r=msScientific(0.0000001);return r.mantissa+'|'+r.exponent},'1|-7'],
+ ['All added reset controls exist',()=>document.querySelectorAll('[data-reset-tool]').length,'6'],
+ ['Curriculum modules are progressively disclosed',()=>!!document.querySelector('#curriculumMore')&&!document.querySelector('#curriculumMore').open,'true'],
+ ['Quadratic distinct roots',()=>msQuadratic(1,-5,6).roots.map(pretty).join(','),'2,3'],
+ ['Quadratic repeated root',()=>msQuadratic(1,-4,4).kind,'double'],
+ ['Quadratic non-real roots',()=>msQuadratic(1,2,5).kind,'complex'],
+ ['Quadratic rejects zero leading coefficient',()=>{try{msQuadratic(0,2,1);return false}catch(e){return true}},'true'],
+ ['Direct proportion',()=>msRatio('direct',2,10,5).result,25],
+ ['Inverse proportion',()=>msRatio('inverse',4,6,8).result,3],
+ ['Map scale',()=>msRatio('scale',0,0,0,5,100000).result,20000],
+ ['Profit amount',()=>msSocial('profit',{buy:80000,sell:100000}).amount,20000],
+ ['Discount final price',()=>msSocial('discount',{price:150000,rate:20}).amount,120000],
+ ['Net weight',()=>msSocial('net',{gross:10,tare:1.5}).amount,8.5],
+ ['Simple interest',()=>msSocial('interest',{principal:1000000,rate:5,years:2}).amount,100000],
+ ['Adjacent angle',()=>msAngleInfo('intersect',65)[2][1],115],
+ ['Same-side interior angle',()=>msAngleInfo('parallel',120)[3][1],60],
+ ['Arithmetic sequence sixth term',()=>msSequence('arithmetic',3,2,6).term,13],
+ ['Geometric sequence fifth term',()=>msSequence('geometric',2,3,5).term,162],
+ ['Square pyramid volume',()=>calculateSolid('squarePyramid',{a:6,h:4}).volume,48],
+ ['General triangular prism volume',()=>pretty(calculateSolid('prism',{a:3,b:4,c:5,L:8}).volume),'48'],
+
  ['Implicit multiplication: 3(2-x)',()=>formatPolynomial(polyParse('3(2-x)')),'-3x + 6'],
  ['Binomial multiplication',()=>formatPolynomial(polyParse('(x+2)(x+3)')),'x^2 + 5x + 6'],
  ['Like terms',()=>formatPolynomial(polyParse('x^2+3x+2x^2-5x+7')),'3x^2 − 2x + 7'],
@@ -2143,4 +3236,4 @@ document.addEventListener('click',e=>{
 
 </script>
 </body>
- </html>
+</html>
